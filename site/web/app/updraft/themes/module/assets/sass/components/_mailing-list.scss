@@ -1,0 +1,13 @@
+//
+// Mailing List
+// --------------------------------------------------
+
+.mailing-list{
+    @include rem(padding, 80px 20px);
+    max-width: 765px;
+    margin: 0 auto;
+}
+
+h2.mailing-list-headline{
+    @include rem(margin-bottom, 5px);
+}

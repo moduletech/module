@@ -1,0 +1,44 @@
+0000.002 (0) Opened log file at time: Wed, 18 Jul 2018 17:47:29 +0000 on http://modulehousing.test/wp
+0000.005 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 2.14.11.1 WP: 4.9.6 PHP: 7.2.7-1+ubuntu16.04.1+deb.sury.org+1 (fpm-fcgi, Linux modulehousing 4.4.0-116-generic #140-Ubuntu SMP Mon Feb 12 21:23:04 UTC 2018 x86_64) MySQL: 5.5.5 WPLANG: en_US Server: nginx/1.15.0 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 54.2M | 20.3M) multisite: N openssl: OpenSSL 1.1.0h  27 Mar 2018 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.007 (0) Free space on disk containing Updraft's temporary directory: 83135.3 MB
+0000.017 (0) Tasks: Backup files: 1 (schedule: daily) Backup DB: 0 (schedule: daily)
+0000.024 (0) Requesting semaphore lock (f) (apparently not via scheduler)
+0000.031 (0) Set semaphore last lock (f) time to 2018-07-18 17:47:29
+0000.033 (0) Semaphore lock (f) complete
+0000.040 (0) Backup run: resumption=0, nonce=5e5e4d7c4c89, begun at=1531936049 (0s ago), job type=backup
+0000.045 (0) Scheduling a resumption (1) after 300 seconds (1531936349) in case this run gets aborted
+0000.060 (0) Checking if we have a zip executable available
+0000.067 (0) Creation of backups of directories: beginning
+0000.077 (0) No backup of plugins: excluded by user's options
+0000.085 (0) Beginning creation of dump of themes (split every: 25 MB)
+0001.432 (0) Total entities for the zip file: 127 directories, 1002 files (0 skipped as non-modified), 20.2 MB
+0001.539 (0) Zip: backup_2018-07-18-1347_Module_5e5e4d7c4c89-themes.zip.tmp: 100 files added (on-disk size: 0 KB)
+0001.655 (0) Zip: backup_2018-07-18-1347_Module_5e5e4d7c4c89-themes.zip.tmp: 200 files added (on-disk size: 0 KB)
+0001.770 (0) Zip: backup_2018-07-18-1347_Module_5e5e4d7c4c89-themes.zip.tmp: 300 files added (on-disk size: 0 KB)
+0001.884 (0) Zip: backup_2018-07-18-1347_Module_5e5e4d7c4c89-themes.zip.tmp: 400 files added (on-disk size: 0 KB)
+0001.987 (0) Zip: backup_2018-07-18-1347_Module_5e5e4d7c4c89-themes.zip.tmp: 500 files added (on-disk size: 0 KB)
+0001.990 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (13.5 MB, 1002 files batched, 501 (501) added so far); re-opening (prior size: 0 KB)
+0006.810 (0) Zip: backup_2018-07-18-1347_Module_5e5e4d7c4c89-themes.zip.tmp: 600 files added (on-disk size: 7090.8 KB)
+0007.076 (0) Zip: backup_2018-07-18-1347_Module_5e5e4d7c4c89-themes.zip.tmp: 700 files added (on-disk size: 7090.8 KB)
+0007.324 (0) Zip: backup_2018-07-18-1347_Module_5e5e4d7c4c89-themes.zip.tmp: 800 files added (on-disk size: 7090.8 KB)
+0007.596 (0) Zip: backup_2018-07-18-1347_Module_5e5e4d7c4c89-themes.zip.tmp: 900 files added (on-disk size: 7090.8 KB)
+0007.916 (0) Zip: backup_2018-07-18-1347_Module_5e5e4d7c4c89-themes.zip.tmp: 1000 files added (on-disk size: 7090.8 KB)
+0007.937 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (6.7 MB, 1002 files batched, 501 (1002) added so far); re-opening (prior size: 7090.8 KB)
+0016.590 (0) Created themes zip (0) - 8527.3 KB in 16.5 s (517.3 KB/s) (sha1: c9e2ed89df9f12a37cab22b89d2d3b1e03d05bc2, sha256: 399d6be1190d30d5b9cedca1fb0ca167e753d0afa4b5100ce073f72adafc69db)
+0016.616 (0) No backup of uploads: excluded by user's options
+0016.621 (0) No backup of others: excluded by user's options
+0016.652 (0) Saving backup status to database (elements: 2)
+0016.664 (0) No database backup (wp) - not part of this run
+0016.701 (0) backup_2018-07-18-1347_Module_5e5e4d7c4c89-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0016.709 (0) Saving backup history. Total backup size: 8.3 MB
+0016.729 (0) Requesting upload of the files that have not yet been successfully uploaded (1)
+0016.749 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0016.757 (0) No remote despatch: user chose no remote backup service
+0016.768 (0) Recording as successfully uploaded: backup_2018-07-18-1347_Module_5e5e4d7c4c89-themes.zip (a6fd6dec5dba665e6fb2655bffdca342)
+0016.797 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0016.812 (0) Resume backup (5e5e4d7c4c89, 0): finish run
+0016.852 (0) Decremented the semaphore (f) by 1
+0016.865 (0) Semaphore (f) unlocked
+0016.868 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0016.885 (0) No email will/can be sent - the user has not configured an email address.
+0016.890 (0) The backup apparently succeeded and is now complete
