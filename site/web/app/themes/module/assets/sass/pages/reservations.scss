@@ -1,0 +1,88 @@
+/**
+ * Reservation Page
+ ---------------------------------------*/
+
+.reservation-intro{
+	@include rem(padding, 0px 20px);
+}
+
+.reservation-intro h2 {
+	@include rem(font-size, 48px);
+}
+
+.reservation-intro {
+	@include rem(padding-top, 80px);
+	@include media(max-width $screen-md) {
+		@include rem(padding-top, 50px);
+	}
+}
+
+.reservation-intro p{
+	max-width: 765px;
+	@include rem(margin, 0 auto 25px);
+	@include rem(font-size, 22px);
+}
+
+// Options
+.reservation-options{
+	@include rem(padding, 40px 20px 90px)
+}
+
+.reservation-option{
+	@include media(min-width $screen-md) {
+		@include rem(padding, 0px 20px);
+	}
+	@include media(max-width $screen-md) {
+		@include rem(padding, 20px);
+	}
+}
+
+.reservation-option__header{
+	background: $brand-black;
+	color: #ffffff;
+	@include rem(padding, 8px 20px);
+}
+
+h2.reservation-option__header-title{
+	@include rem(font-size, 24px);
+	color: #ffffff;
+	font-family: $headings-font-family;
+	margin: 0px;
+}
+ 
+.reservation-option__plan-perks{
+	border: 1px solid #eaeaea;
+}
+
+.plan-perk{
+	@include rem(padding, 20px);
+	border-bottom: 1px solid #eaeaea;
+	display: flex;
+	align-items: center;
+	&:last-child{
+		border-bottom: 0px;
+	}
+}
+
+.perk-icon{
+	@include rem(height, 30px);
+	@include rem(width, 30px);
+	@include rem(max-width, 26px);
+	@include rem(margin, 0px 15px 0px 0px);
+}
+
+.plan-perk__inactive p{
+	color: #bbbbbb;
+	text-decoration: line-through;
+}
+
+.plan-perk p{
+	margin: 0px;
+	display: inline-block;
+}
+
+.reservation-form{
+	max-width: 765px;
+	@include rem(padding, 0px 20px);
+	@include rem(margin-bottom, 60px);
+}

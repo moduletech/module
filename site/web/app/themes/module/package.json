@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "name": "mitro",
+  "version": "1.0.0",
+  "dotVersion": "1.0.",
+  "css": "0c",
+  "js": "0c",
+  "human": "mitro",
+  "company": "Pittsburgh Penguins Foundation",
+  "homepage": "http://pittsburghpenguinsfoundation.org/",
+  "website": "http://pittsburghpenguinsfoundation.org/",
+  "description": "Wordpress Theme and Build Process created by the fine folks at Inquiri.",
+  "author": {
+    "name": "Jerome Fitzgerald",
+    "email": "jfitzgerald@inquiri.com",
+    "url": "http://inquiri.com"
+  },
+  "dependencies": {
+    "laravel-elixir": "^5.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^3.0.2"
+  }
+}

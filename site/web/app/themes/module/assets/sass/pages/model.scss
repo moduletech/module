@@ -1,0 +1,185 @@
+//
+// Model Pages
+// --------------------------------------------------
+
+// Hero
+.model-header{
+//    background-color: #D1ECFF;
+    @include rem(padding, 90px 20px 0px);
+}
+
+p.model-header__copy {
+    @include rem(font-size, 26px);
+    @include rem(margin, 0px 0px 10px);
+}
+
+h1.model-header__title{
+    @include rem(font-size, 64px);
+    margin: 0px 0px 5px;
+}
+
+.model-header__hero-image{
+    @include rem(margin-top, 50px);
+}
+
+// Intro
+.model-intro{
+    //border-top: 2px solid $light-gray;
+    @include media(min-width $screen-xl) {
+        @include rem(padding, 50px 00px 100px);
+    }
+    @include media(max-width $screen-xl) {
+        @include rem(padding, 50px 20px 100px);
+    }
+}
+
+.model-intro p{
+    @include rem(font-size, 28px);
+}
+
+// Feature Set
+
+.model-features{
+    @include rem(padding, 0px 20px);
+    @include rem(margin-bottom, 160px);
+}
+
+.model-feature{
+    border: 1px solid $border-gray;
+    border-top: 5px solid $brand-blue;
+    @include rem(padding, 20px 30px 30px);
+}
+
+.model-feature__icon{
+    @include rem(height, 160px);
+    @include rem(width, 160px);
+}
+
+.model-feature__number{
+    @include rem(font-size, 36px);
+    font-family: $headings-font-family;
+    line-height: 1;
+    margin: 0px;
+}
+
+.model-feature__text{
+    @include rem(font-size, 24px);
+}
+
+
+// Floorplans
+.model-floorplan{
+    @include rem(padding, 50px 50px 0px);
+    background-color: #D1ECFF;
+}
+
+.model-floorplan__floors{
+    position: relative;
+}
+
+// New for Toby
+.model-floorplan__header{
+    // @include rem(left, 10px);
+    // @include rem(padding, 20px 60px 30px 0px);
+    // @include rem(top, 0px);
+    // border-top: 5px solid $brand-blue;
+    // position: absolute;
+    // z-index: 9;
+
+    left: 10px;
+    left: .625rem;
+    @include rem(left, 10px);
+    @include rem(padding, 20px 60px 30px 0);
+    top: 0;
+    border-top: 5px solid #1c496f;
+    @include media(max-width $screen-md) {
+        @include rem(padding, 20px 60px 30px 0);
+        z-index: 9;
+    }
+}
+
+.model-floorplan__nav-button{
+    border: 3px solid $brand-black;
+    color: $brand-black;
+    text-align: left;
+    &:hover{
+        background-color: $brand-yellow;
+        border-color: $brand-blue;
+        color: $brand-blue;
+    }
+    @include media(max-width $screen-md) {
+        @include rem(margin-bottom, 5px);
+        display: block;
+    }
+}
+// /Toby
+
+
+.model-floorplan__nav-button.active{
+    background-color: $brand-yellow;
+    border-color: $brand-blue;
+    color: $brand-blue;
+}
+
+.model-floorplan__floor-img{
+    @include rem(padding-top, 40px);
+}
+
+.model-form{
+    @include rem(padding, 80px 20px 70px);
+}
+
+// Model CTA
+.model-demo-cta{
+    background-color: $brand-yellow;
+    @include rem(padding, 40px 20px 50px);
+}
+
+.model-demo-cta .u-container{
+    @include media(min-width $screen-md){
+        display: flex;
+        align-items: center;
+    }
+}
+
+.model-demo-cta__headline{
+    @include rem(font-size, 36px);
+    @include rem(margin-bottom, 5px);
+}
+
+.model-demo-cta__copy{
+    @include media(min-width $screen-md){
+        margin-bottom: 0px;
+    }
+}
+
+.model-demo-cta__button{
+    @include media(min-width $screen-md){
+        margin-left: auto;
+    }
+}
+
+.model-demo-cta__button .btn{
+	@include rem(padding, 10px 45px);
+}
+
+// Other Models
+.model-other-models{
+    @include rem(padding, 80px 20px 90px);
+}
+
+h2.model-other-models__headline{
+    @include rem(font-size, 48px);
+    @include rem(margin, 0px 0px 60px);
+}
+
+.model-other-model:first-child{
+    @include media(max-width $screen-md){
+        @include rem(margin-bottom, 80px);
+    }
+}
+
+.model-other-model__headline{
+    @include rem(font-size, 36px);
+    @include rem(margin, 20px 0px 15px);
+}

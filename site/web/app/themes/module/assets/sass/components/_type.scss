@@ -1,0 +1,117 @@
+//
+// Type Baselines
+// --------------------------------------------------
+::selection{
+	background-color: $brand-yellow;
+	color: $brand-blue;
+}
+
+::-moz-selection{
+	background-color: $brand-yellow;
+	color: $brand-blue;
+}
+
+html{
+	font-size: 100%; /* Sets baseline of 16px for REM calculations */
+	-webkit-font-smoothing: antialiased;
+	@include media(max-width 992px) {
+		font-size: 90%;
+	}
+}
+
+body{
+	@include rem(font-size, $font-size-base);
+	font-family: $font-family;
+}
+
+body:not(.home) .main{
+	position: relative;
+	@include media(max-width $screen-md) {
+		//@include rem(padding-top, 50px);
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 400;
+	color: $brand-blue;
+	margin-top: 0px;
+	line-height: 1.2;
+	text-transform: uppercase;
+	font-family: $headings-font-family;
+}
+
+h2{
+	@include rem(font-size, 48px);
+	@include rem(margin, 0px 0px 20px);
+}
+
+h3{
+	@include rem(font-size, 22px);
+	@include rem(margin-bottom, 20px);
+	font-weight: 400;
+}
+
+p {
+	@include rem(margin, 0px 0px 25px);
+	@include rem(font-size, 20px);
+	line-height: 1.6;
+	font-weight: 300;
+	color: $brand-black;
+}
+
+li {
+	font-weight: 300;
+	color: $brand-black;
+}
+
+dfn, cite, em, i {
+	font-style: italic;
+}
+
+blockquote {
+	@include rem(margin, 0px 15px);
+}
+
+address{
+	@include rem(margin-bottom, 10px);
+}
+
+code, kbd, tt, var {
+	@include rem(font-size, 15px);
+	font-family: "Monaco", "Lucida Console", "Consolas", sans-serif;
+}
+
+abbr, acronym {
+	border-bottom: 1px dotted $text-gray;
+	cursor: help;
+}
+
+a{
+	@include transition(all .15s linear);
+	color: $brand-yellow;
+	text-decoration: none;
+	&:hover{
+		color: $brand-blue;
+	}
+}
+
+a.icon-active svg path{
+	fill: $brand-blue !important;
+}
+
+ul{
+	margin: 0;
+}
+
+.screen-reader-text{
+	visibility: hidden;
+	height: 0px;
+	margin: 0px;
+}
+
+
+h3.section-header{
+	color: #808080;
+	@include rem(font-size, 12px);
+	@include rem(margin, 0 auto 35px);
+}
