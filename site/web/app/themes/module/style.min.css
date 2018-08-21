@@ -2224,6 +2224,9 @@ h2.model-other-models__headline {
 .quiz-body .gform_page_footer {
   margin-top: 32px; }
 
+li.active-result {
+  color: #143753 !important; }
+
 /**
  * Reservation Page
  ---------------------------------------*/
