@@ -1081,7 +1081,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #1C496F;
   margin-top: 0px;
   line-height: 1.2;
-  text-transform: uppercase;
   font-family: "Unica One", cursive; }
 
 h2 {
@@ -1721,68 +1720,71 @@ h1.demo-form__headline {
   position: relative; }
   @media screen and (min-width: 767px) {
     .home-hero {
-      height: 200vh; } }
+      height: 80vh; } }
   @media screen and (max-width: 767px) {
     .home-hero {
       min-height: 1500px; } }
 
-@media screen and (min-width: 767px) {
-  .home-hero__content {
-    padding: 160px 40px;
-    padding: 10rem 2.5rem; } }
+.home-hero__content {
+  text-align: left; }
+  @media screen and (min-width: 767px) {
+    .home-hero__content {
+      padding: 160px 222px;
+      padding: 10rem 13.875rem; } }
+  @media screen and (max-width: 767px) {
+    .home-hero__content {
+      padding: 140px 40px;
+      padding: 8.75rem 2.5rem; } }
+  @media screen and (max-width: 600px) {
+    .home-hero__content {
+      padding: 140px 20px;
+      padding: 8.75rem 1.25rem; } }
 
-@media screen and (max-width: 767px) {
-  .home-hero__content {
-    padding: 140px 40px;
-    padding: 8.75rem 2.5rem; } }
-
-@media screen and (max-width: 600px) {
-  .home-hero__content {
-    padding: 140px 20px;
-    padding: 8.75rem 1.25rem; } }
-
-h1.home-hero__headline {
+h2.home-hero__firstline {
+  font-family: "Open Sans", bold;
   margin: 0 0 5px;
   margin: 0 0 0.3125rem; }
   @media screen and (min-width: 767px) {
-    h1.home-hero__headline {
-      font-size: 72px;
-      font-size: 4.5rem; } }
+    h2.home-hero__firstline {
+      font-size: 40px;
+      font-size: 2.5rem; } }
   @media screen and (max-width: 767px) {
-    h1.home-hero__headline {
-      font-size: 60px;
-      font-size: 3.75rem;
+    h2.home-hero__firstline {
+      font-size: 30px;
+      font-size: 1.875rem;
       line-height: 1.2; } }
   @media screen and (max-width: 600px) {
-    h1.home-hero__headline {
-      font-size: 48px;
-      font-size: 3rem;
+    h2.home-hero__firstline {
+      font-size: 24px;
+      font-size: 1.5rem;
       line-height: 1.2; } }
 
-p.home-hero__desc {
-  margin: 0 0 50px;
-  margin: 0 0 3.125rem;
+h1.home-hero__headline {
+  font-family: "Open Sans", bold;
+  margin: 10px 0 50px;
+  margin: 0.625rem 0 3.125rem;
   font-weight: 300;
-  font-size: 24px;
-  font-size: 1.5rem; }
+  font-size: 60px;
+  font-size: 3.75rem;
+  line-height: 35px;
+  line-height: 2.1875rem; }
   @media screen and (max-width: 767px) {
-    p.home-hero__desc {
+    h1.home-hero__headline {
       font-size: 20px;
       font-size: 1.25rem; } }
 
 .home-intro {
   padding: 20px;
   padding: 1.25rem;
-  background-color: #ffffff;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-  left: 50%;
+  background-color: #D8D8D8;
+  left: 35%;
   position: absolute; }
   @media screen and (min-width: 767px) {
     .home-intro {
       margin-left: -382px;
-      max-width: 765px;
-      bottom: 100px;
-      bottom: 6.25rem; } }
+      max-width: 1200px;
+      bottom: -200px;
+      bottom: -12.5rem; } }
   @media screen and (max-width: 767px) {
     .home-intro {
       max-width: 95%;
@@ -1790,16 +1792,15 @@ p.home-hero__desc {
       bottom: 80px;
       bottom: 5rem; } }
 
-.home-intro__wrapper {
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2); }
-  @media screen and (min-width: 767px) {
-    .home-intro__wrapper {
-      padding: 40px 50px 30px;
-      padding: 2.5rem 3.125rem 1.875rem; } }
-  @media screen and (max-width: 767px) {
-    .home-intro__wrapper {
-      padding: 40px 30px 30px;
-      padding: 2.5rem 1.875rem 1.875rem; } }
+@media screen and (min-width: 767px) {
+  .home-intro__wrapper {
+    padding: 40px 50px 30px;
+    padding: 2.5rem 3.125rem 1.875rem; } }
+
+@media screen and (max-width: 767px) {
+  .home-intro__wrapper {
+    padding: 40px 30px 30px;
+    padding: 2.5rem 1.875rem 1.875rem; } }
 
 h2.home-intro__headline {
   margin: 0 0 50px;
@@ -1824,20 +1825,23 @@ h2.home-intro__headline {
 
 @media screen and (min-width: 767px) {
   .home-pay {
-    padding: 100px 20px 70px;
-    padding: 6.25rem 1.25rem 4.375rem; } }
+    padding: 300px 20px 70px;
+    padding: 18.75rem 1.25rem 4.375rem; } }
 
 @media screen and (max-width: 767px) {
   .home-pay {
     padding: 80px 20px 70px;
     padding: 5rem 1.25rem 4.375rem; } }
 
+.home-pay .u-col-four {
+  margin: 0;
+  padding: 0px 25px; }
+
 .home-pay__img {
   width: 430px;
   width: 26.875rem; }
 
-h2.home-pay__headline {
-  border-top: 3px solid #1C496F;
+h3.home-pay__headline {
   padding-top: 20px;
   padding-top: 1.25rem; }
 

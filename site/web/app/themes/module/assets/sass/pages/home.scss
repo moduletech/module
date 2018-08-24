@@ -9,7 +9,7 @@
 	background-position: center;
 	background-size: cover;
 	@include media(min-width $screen-md) {
-		height: 200vh;
+		height: 80vh;
 	}
 	@include media(max-width $screen-md) {
 		min-height: 1500px;
@@ -18,8 +18,10 @@
 }
 
 .home-hero__content{
+	text-align:left;
+
 	@include media(min-width $screen-md) {
-		@include rem(padding, 160px 40px);
+		@include rem(padding, 160px 222px);
 	}
 	@include media(max-width $screen-md) {
 		@include rem(padding, 140px 40px);
@@ -29,25 +31,29 @@
 	}
 }
 
-h1.home-hero__headline{
+h2.home-hero__firstline{
+	font-family: $special-font-family;
+
 	@include rem(margin, 0px 0px 5px);
 	@include media(min-width $screen-md) {
-		@include rem(font-size, 72px);
+		@include rem(font-size, 40px);
 	}
 	@include media(max-width $screen-md) {
-		@include rem(font-size, 60px);
+		@include rem(font-size, 30px);
 		line-height: 1.2;
 	}
 	@include media(max-width $screen-mobile) {
-		@include rem(font-size, 48px);
+		@include rem(font-size, 24px);
 		line-height: 1.2;
 	}
 }
 
-p.home-hero__desc{
-	@include rem(margin, 0px 0px 50px);
+h1.home-hero__headline{ 
+	font-family: $special-font-family;
+	@include rem(margin, 10px 0px 50px);
 	font-weight: 300;
-	@include rem(font-size, 24px);
+	@include rem(font-size, 60px);
+	@include rem(line-height, 35px);
 	@include media(max-width $screen-md) {
 		@include rem(font-size, 20px);
 	}
@@ -56,14 +62,14 @@ p.home-hero__desc{
 // Intro
 .home-intro{
 	@include rem(padding, 20px);
-	background-color: #ffffff;
-	box-shadow: 0px 0px 25px rgba(0,0,0,.2);
-	left: 50%;
+	background-color: #D8D8D8;
+	//box-shadow: 0px 0px 25px rgba(0,0,0,.2);
+	left: 35%;
 	position: absolute;
 	@include media(min-width $screen-md) {
 		margin-left: -382px;
-		max-width: 765px;
-		@include rem(bottom, 100px);
+		max-width: 1200px;
+		@include rem(bottom, -200px);
 	}
 	@include media(max-width $screen-md) {
 		max-width: 95%;
@@ -73,7 +79,7 @@ p.home-hero__desc{
 }
 
 .home-intro__wrapper{
-	box-shadow: 0px 0px 25px rgba(0,0,0,.2);
+//	box-shadow: 0px 0px 25px rgba(0,0,0,.2);
 	@include media(min-width $screen-md) {
 		@include rem(padding, 40px 50px 30px);
 	}
@@ -106,10 +112,15 @@ h2.home-intro__headline{
 // Home Pay
 .home-pay{
 	@include media(min-width $screen-md) {
-		@include rem(padding, 100px 20px 70px);
+		@include rem(padding, 300px 20px 70px);
 	}
 	@include media(max-width $screen-md) {
 		@include rem(padding, 80px 20px 70px);
+	}
+
+	.u-col-four{
+		margin: 0;
+    padding: 0px 25px;
 	}
 }
 
@@ -117,8 +128,8 @@ h2.home-intro__headline{
 	@include rem(width, 430px);
 }
 
-h2.home-pay__headline{
-	border-top: 3px solid $brand-blue;
+h3.home-pay__headline{
+	//border-top: 3px solid $brand-blue;
 	@include rem(padding-top, 20px);
 }
 

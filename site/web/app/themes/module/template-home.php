@@ -11,16 +11,12 @@ if (have_rows('home_content')) :
         if (get_row_layout() == 'hero') :?>
 		    <section class="home-hero u-text-center">
 		    	<div class="home-hero__content">
-		    		<h1 class="home-hero__headline u-text-white" itemprop="headline">
+		    		<h2 class="home-hero__firstline u-text-white" itemprop="firstline">
+		            	<?php the_sub_field('firstline'); ?>
+		            </h2>
+		            <h1 class="home-hero__headline u-text-white" itemprop="headline">
 		            	<?php the_sub_field('headline'); ?>
 		            </h1>
-		            <p class="home-hero__desc u-text-white" itemprop="description">
-		            	<?php the_sub_field('subheadline'); ?>
-		            </p>
-		            <a class="btn btn-outline-white btn-hero" href="#mailer">
-						Sign Up for the Mailing List
-		                <!--<?php the_sub_field('btn-text'); ?>-->
-		            </a>
 		    	</div>
 
         <?php elseif (get_row_layout() == 'intro') :?>
@@ -41,14 +37,23 @@ if (have_rows('home_content')) :
         <?php elseif (get_row_layout() == 'demo') :?>
         	<section class="home-pay js-home-pay u-text-center u-bg-light-yellow">
 		    	<div class="home-pay__wrapper u-container">
-		    		<div class="u-col-six u-text-left">
+		    		<div class="u-col-four u-text-left">
 				    	<h2 class="home-pay__headline">
-				    		<?php the_sub_field('headline'); ?>
+				    		<?php the_sub_field('left_headline'); ?>
 				    	</h2>
-				    	<?php the_sub_field('copy'); ?>
+				    	<?php the_sub_field('left_copy'); ?>
 					</div>
-					<div class="u-col-six">
-						<?php include('templates/_home-assembly.php') ?>
+					<div class="u-col-four u-text-left">
+						<h2 class="home-pay__headline">
+							<?php the_sub_field('middle_headline'); ?>
+						</h2>
+						<?php the_sub_field('middle_copy'); ?>
+					</div>
+					<div class="u-col-four u-text-left">
+						<h2 class="home-pay__headline">
+							<?php the_sub_field('right_headline'); ?>
+						</h2>
+						<?php the_sub_field('right_copy'); ?>
 					</div>
 				</div><!-- u-container-->
 				<!--<a class="btn btn-yellow" href="<?php the_sub_field('btn-link'); ?>">
