@@ -1,4 +1,4 @@
-/* 
+/*
 * Table of Contents
 * . Border Radii
 * . Colors
@@ -6,6 +6,7 @@
 * . Typography
 * . Z-Index
 */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
 
 //
@@ -30,13 +31,14 @@ $brand-light-blue: #E1EDEB;
 $brand-yellow: #fdba4f;
 $brand-light-yellow: #FFE8C0;
 
-
+$brand-green: #56C1AF;
 
 
 /* Grays */
 $light-gray: #f2f2f2;
 $border-gray: #cccccc;
 $text-gray: #808080;
+$black: #000;
 
 
 

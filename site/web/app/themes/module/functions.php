@@ -160,6 +160,21 @@ if( function_exists('acf_add_options_page') ) {
 
 }
 
+
+//
+// Remove p-tags from acf content
+// -------------------------------------
+function the_field_without_wpautop( $field_name ) {
+	remove_filter('acf_the_content', 'wpautop');
+	the_field( $field_name );
+	add_filter('acf_the_content', 'wpautop');
+}
+function the_sub_field_without_wpautop( $field_name ) {
+	remove_filter('acf_the_content', 'wpautop');
+	the_sub_field( $field_name );
+	add_filter('acf_the_content', 'wpautop');
+}
+
 //
 // Display Custom Login Logo
 // ---------------------------------------
