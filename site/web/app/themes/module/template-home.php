@@ -18,7 +18,7 @@ if (have_rows('home_content')) :
         <section class="home-hero u-text-center" <?=$hero_image?>>
           <div class="home-hero__content">
             <h1 class="home-hero__headline u-text-white" itemprop="headline">
-              <?php the_sub_field_without_wpautop('headline'); ?>
+              <?php the_sub_field('headline'); ?>
             </h1>
           </div>
         </section>
@@ -99,6 +99,7 @@ if (have_rows('home_content')) :
                 $permalink = get_the_permalink($model);
                 ?>
                 <div class="home">
+                  <h3 class="mobile_title"><?=$title?></h3>
                   <div class="img" style="background-image:url(<?=$hero_image?>)"></div>
                   <div class="content">
                     <h3 class="title"><?=$title?></h3>
@@ -181,20 +182,6 @@ if (have_rows('home_content')) :
   endif; ?>
 
 </main>
-
-<section>
-<div class="home-header">
-  <h2 class="title">Ready to Get Started?</h2>
-</div>
-<div class="content">
-  <div class="col">
-  </div>
-  <div class="col">
-  </div>
-  <div class="col">
-  </div>
-</div>
-</section>
 
 <?php
 // include('templates/_mailing-list.php');

@@ -7,7 +7,7 @@
 <?php if (is_front_page()) {?>
     <header class="site-header__home">
         <a href="<?php echo bloginfo('url');?>">
-            <img class="primary-nav__logo u-center-block" src="<?php echo get_stylesheet_directory_uri();?>/assets/img-dist/logo-white__text.svg" alt="Module Logo">
+            <img class="primary-nav__logo" src="<?php echo get_stylesheet_directory_uri();?>/assets/img-dist/logo-white__text.svg" alt="Module Logo">
         </a>
     </header>
 

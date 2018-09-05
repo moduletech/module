@@ -1,5 +1,66 @@
 
 //
+// Ready to Get Started?
+// ------------------------------------------------
+
+.ready_to_get_started {
+  margin: 0 4%;
+  .content {
+    background: $light-gray;
+    display: flex;
+    margin: 0 auto 8em;
+    padding: 1em 0 0;
+    max-width: 1293px;
+    .col {
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 calc(100% / 3);
+      padding: 1em 2em 2em;
+      text-align: center;
+      & + .col {
+        border-left: 1px solid $border-gray;
+      }
+      .title {
+        font-family: $special-font-family;
+        color: $brand-gray;
+        font-weight: bold;
+      }
+      .subtitle {
+        font-family: $special-font-family;
+        color: $text-gray;
+        border-bottom: 1px solid $border-gray;
+        padding-bottom: 1em;
+        font-size: 1em;
+      }
+      .buttons {
+        .btn {
+          margin-bottom: 1em;
+          width: 100%;
+        }
+      }
+    }
+    @media (max-width: $screen-md) {
+      flex-wrap: wrap;
+      .col {
+        flex: 0 0 100%;
+        padding-bottom: 1em;
+        .buttons {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          .btn {
+            width: 280px;
+            flex: 0 0 auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+//
 // Footer
 // --------------------------------------------------
 
