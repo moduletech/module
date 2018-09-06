@@ -12,3 +12,5 @@ get_header();?>
 				<?php include('templates/_mailing-list.php'); ?>
     </section>
 </div>
+
+<?php get_footer();?>

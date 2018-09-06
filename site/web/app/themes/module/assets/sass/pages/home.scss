@@ -189,6 +189,7 @@
         box-shadow: 10px 20px 20px rgba(57,57,57,.2);
         min-width: 320px;
         max-width: 480px;
+				min-height: 800px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -205,6 +206,7 @@
         .img {
           order: 2;
           background-size: contain;
+					height: 50%;
         }
       }
       @media (max-width: $screen-md) {
