@@ -10,11 +10,11 @@
     display: flex;
     margin: 0 auto 8em;
     padding: 1em 0 0;
-    max-width: 862px;
+    max-width: 1293px;
     .col {
       display: flex;
       flex-direction: column;
-      flex: 0 0 calc(100% / 2);
+      flex: 0 0 calc(100% / 3);
       padding: 1em 2em 2em;
       text-align: center;
       & + .col {

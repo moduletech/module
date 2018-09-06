@@ -17,7 +17,7 @@
     <h2 class="title"><?=get_field('rtgs_title','options')?></h2>
   </div>
   <div class="content">
-    <? foreach(array('one','two') as $n) { ?>
+		<? foreach(array('one','two','three') as $n) { ?>
       <div class="col">
         <? $col = get_field('rtgs_column_'.$n,'options'); ?>
         <h3 class="title"><?=$col['title']?></h3>
