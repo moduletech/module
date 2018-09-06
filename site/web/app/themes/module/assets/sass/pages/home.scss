@@ -157,12 +157,12 @@
     box-shadow: 10px 20px 20px rgba(57,57,57,.2);
     .pane {
       flex: 0 0 (100% / 3);
-      min-height: 580px;
+      min-height: 700px;
       padding-bottom: 1em;
       .img {
         display: block;
         width: 100%;
-        height: 62%;
+        height: 50%;
         background-size: 100% auto;
         background-position: 50% 0%;
         background-repeat: no-repeat;
@@ -184,12 +184,11 @@
           line-height: 1.6;
         }
       }
-      @media (max-width: $screen-lg) {
+			@media (max-width: $screen-xl) {
         flex: 0 0 50%;
         box-shadow: 10px 20px 20px rgba(57,57,57,.2);
         min-width: 320px;
         max-width: 480px;
-				min-height: 800px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -209,7 +208,7 @@
 					height: 50%;
         }
       }
-      @media (max-width: $screen-md) {
+      @media (max-width: $screen-lg) {
         flex: 0 0 100%;
         .img {
           background-size: contain;
@@ -217,7 +216,7 @@
           height: 56%
         }
       }
-      @media (min-width: $screen-lg) {
+      @media (min-width: $screen-xl) {
         &:first-of-type {
           flex: 0 0 100%;
           display: flex;
