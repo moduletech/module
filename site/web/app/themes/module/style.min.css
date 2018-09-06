@@ -2006,6 +2006,7 @@ h1.demo-form__headline, .home-hero .home-hero__content h1 p.demo-form__headline 
       display: -ms-flexbox;
       display: flex;
       max-width: 1293px;
+      width: 100%;
       box-shadow: 10px 20px 20px rgba(57, 57, 57, 0.2);
       min-height: 226px;
       margin: 0 auto 40px;
