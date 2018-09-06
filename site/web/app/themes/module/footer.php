@@ -17,11 +17,10 @@
     <h2 class="title"><?=get_field('rtgs_title','options')?></h2>
   </div>
   <div class="content">
-    <? foreach(array('one','two','three') as $n) { ?>
+    <? foreach(array('one','two') as $n) { ?>
       <div class="col">
         <? $col = get_field('rtgs_column_'.$n,'options'); ?>
         <h3 class="title"><?=$col['title']?></h3>
-        <p class="subtitle"><?=$col['subtitle']?></p>
         <div class="buttons">
           <? foreach($col['buttons'] as $button) { ?>
           <a class="btn btn-outline-black" href="<?=$button['button_url']?>"><?=$button['button_text']?></a>

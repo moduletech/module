@@ -10,11 +10,11 @@
     display: flex;
     margin: 0 auto 8em;
     padding: 1em 0 0;
-    max-width: 1293px;
+    max-width: 862px;
     .col {
       display: flex;
       flex-direction: column;
-      flex: 0 0 calc(100% / 3);
+      flex: 0 0 calc(100% / 2);
       padding: 1em 2em 2em;
       text-align: center;
       & + .col {
@@ -24,14 +24,15 @@
         font-family: $special-font-family;
         color: $brand-gray;
         font-weight: bold;
+				min-height: 52px;
       }
-      .subtitle {
-        font-family: $special-font-family;
-        color: $text-gray;
-        border-bottom: 1px solid $border-gray;
-        padding-bottom: 1em;
-        font-size: 1em;
-      }
+      //.subtitle {
+      //  font-family: $special-font-family;
+      //  color: $text-gray;
+      //  border-bottom: 1px solid $border-gray;
+      //  padding-bottom: 1em;
+      //  font-size: 1em;
+      //}
       .buttons {
         .btn {
           margin-bottom: 1em;
