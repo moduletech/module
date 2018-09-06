@@ -1,5 +1,5 @@
 <?php /*
-/* Template Name: Contact
+/* Template Name: Newsletter
 */
 get_header();?>
 
@@ -7,10 +7,9 @@ get_header();?>
     <section class="contact-form u-center-block">
         <header class="contact-form__header">
             <h2 class="contact-form__header-title u-text-center">
-                Contact Module
             </h2>
         </header>
-        <?php echo do_shortcode('[gravityform id=3 title=false description=false ajax=true tabindex=49]');?>
+				<?php include('templates/_mailing-list.php'); ?>
     </section>
 </div>
 

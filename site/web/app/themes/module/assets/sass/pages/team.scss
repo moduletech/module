@@ -58,6 +58,7 @@ h2.team-member__name{
 
 .social-icon{
     min-width: 20px;
+    max-width: 20px;
     @include rem(margin, 0px 15px 0px 0px);
 }
 
