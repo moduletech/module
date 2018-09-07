@@ -230,11 +230,12 @@
       }
     }
     .feature {
-      padding: 2em;
+      padding: 1em 2em;
       .name {
         text-transform: uppercase;
         border-bottom: 1px solid $light-gray;
         padding-bottom: 8px;
+        margin-bottom: .5em;
       }
       ul {
         margin: 0;
@@ -242,6 +243,7 @@
         list-style: none;
         li {
           padding-left: 32px;
+          margin-bottom: 1em;
           position: relative;
           &:before {
             content: '';

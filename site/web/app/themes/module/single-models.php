@@ -102,27 +102,40 @@
 
       <div class="price-tiers">
         <? $n=0;
-            $tier_names = get_field('tiers','options');
+            $tiers = get_field('tiers','options')['tier'];
             $tier_costs = get_field('tiers');
             while($n < 3) {
           ?>
           <div class="tier">
-          <h3 class="title"><?= $tier_names['tier-'.($n+1)] ?></h3>
+          <h3 class="title"><?= $tiers[$n]['name'] ?></h3>
             <div class="price">
               <small>Starting at</small>
               <span>$<?= number_format($tier_costs[$n]['cost']) ?>*</span>
             </div>
-            <div class="feature">
-              <h3 class="name">Module's Services</h3>
-              <ul>
-                <li>
-                  <div class="content">
-                    <span>Something something</span>
-                    <small>Something else</small>
-                  </div>
-                </li>
-              </ul>
-            </div>
+            <?
+            foreach($tiers[$n]['features'] as $feature) {
+            ?>
+              <div class="feature">
+                <h3 class="name"><?= $feature['name'] ?></h3>
+                <ul>
+                  <?
+                  foreach($feature['categories'] as $category) {
+                  ?>
+                  <li>
+
+                    <div class="content">
+                      <span><?= $category['item'] ?></span>
+                      <small><?= $category['subtext'] ?></small>
+                    </div>
+                  </li>
+                  <?
+                  }
+                  ?>
+                </ul>
+              </div>
+            <?
+            }
+            ?>
           </div>
         <? $n++; } ?>
         </div>
