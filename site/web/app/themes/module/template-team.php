@@ -6,9 +6,10 @@ get_header();?>
 
 <main class="main" itemscope itemType="https://schema.org/WebPage">
     <section class="team">
-        <h2 class="team-headline">
-            Our Team
-        </h2>
+        <div class="double-header">
+          <h2 class="title">Our Team</h2>
+          <!--<h4 class="subtitle"><?=get_sub_field('subtitle')?></h4>-->
+        </div>
         <?php
         if (have_rows('team')) :
             while (have_rows('team')) :
@@ -48,7 +49,7 @@ get_header();?>
                             ?>
                         </div>
                         </div>
-                        
+
                         <?php the_sub_field('bio');?>
                     </div><!-- /image-->
                 </div>
@@ -59,10 +60,11 @@ get_header();?>
     </section>
 
     <section class="team">
-        <h2 class="team-headline">
-            Our Advisors
-        </h2>
-        <div class="advisors-wrapper">
+      <div class="double-header">
+        <h2 class="title">Our Advisors</h2>
+        <!--<h4 class="subtitle"><?=get_sub_field('subtitle')?></h4>-->
+      </div>
+      <div class="advisors-wrapper">
             <?php
             if (have_rows('advisors')) :
                 $count = 0;

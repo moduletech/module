@@ -6,10 +6,13 @@
     @include rem(padding, 20px 0px 60px);
 }
 
+.team .double-header {
+  margin-bottom: 4em;
+}
 h2.team-headline{
-    @include rem(padding, 0px 0px 30px);
+    @include rem(padding, 20px 0px 30px);
     @include rem(margin, 0px 20px 60px);
-    border-bottom: 3px solid $brand-yellow;
+    text-align: center;
 }
 
 .team-member{
@@ -23,11 +26,11 @@ h2.team-headline{
     @include media(max-width $screen-mobile){
         max-width: 300px;
         margin: 0 0px 40px;
-    }   
+    }
 }
 
 .team-member__image img{
-    border-radius: 50%; 
+    border-radius: 50%;
 }
 
 .team-member__content{
@@ -110,11 +113,11 @@ h2.team-member__name{
     }
     @include media(max-width $screen-lg){
         margin: 0 0px 40px;
-    }   
+    }
 }
 
 .advisor__image img{
-    border-radius: 50%; 
+    border-radius: 50%;
 }
 
 .advisor__content{

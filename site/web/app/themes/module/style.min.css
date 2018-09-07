@@ -1161,7 +1161,8 @@ h1, .home-hero .home-hero__content h1 p, h2, h3, .price-tiers .tier .price, h4, 
   color: #1C496F;
   margin-top: 0px;
   line-height: 1.2;
-  font-family: "Unica One", cursive; }
+  font-family: "Unica One", cursive;
+  text-transform: uppercase; }
 
 h2 {
   font-size: 48px;
@@ -2931,12 +2932,15 @@ h2.reservation-option__header-title {
   padding: 20px 0 60px;
   padding: 1.25rem 0 3.75rem; }
 
+.team .double-header {
+  margin-bottom: 4em; }
+
 h2.team-headline {
-  padding: 0 0 30px;
-  padding: 0 0 1.875rem;
+  padding: 20px 0 30px;
+  padding: 1.25rem 0 1.875rem;
   margin: 0 20px 60px;
   margin: 0 1.25rem 3.75rem;
-  border-bottom: 3px solid #fdba4f; }
+  text-align: center; }
 
 .team-member {
   padding: 0 20px 60px;
