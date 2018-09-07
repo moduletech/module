@@ -370,12 +370,12 @@
         float: left;
         height: auto;
         min-height: 1em;
-        width: 80px;
-        margin: .25em 5% 0 0;
+        width: 92px;
+        margin: 0 5% 0 0;
       }
       h3 {
         float: right;
-        width: calc(100% - 5% - 80px);
+        width: calc(100% - 5% - 92px);
         font-family: $special-font-family;
         color: $black;
         font-weight: bold;
@@ -383,7 +383,7 @@
       }
       .description {
         float: right;
-        width: calc(100% - 5% - 80px);
+        width: calc(100% - 5% - 92px);
       }
       &:after {
         content: '\203A';
@@ -399,19 +399,20 @@
         color: #FFF;
         border-radius: 50%;
         text-align: center;
-        line-height: 24px;
+        line-height: 25px;
         font-size: 36px;
         font-weight: bold;
       }
       @media (max-width: $screen-md) {
-        padding-bottom: 60px;
+        padding: 1em 8% 60px;
         img {
           width: 47px;
+          margin-bottom: .5em;
         }
         h3 {
           width: calc( 100% - 5% - 47px );
           font-weight: normal;
-          margin-bottom: 1em;
+          margin: .25em 0 .5em;
           @include rem(font-size,16px);
         }
         .description {

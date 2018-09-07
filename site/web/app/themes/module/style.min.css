@@ -2179,18 +2179,18 @@ h1.demo-form__headline, .home-hero .home-hero__content h1 p.demo-form__headline 
       float: left;
       height: auto;
       min-height: 1em;
-      width: 80px;
-      margin: .25em 5% 0 0; }
+      width: 92px;
+      margin: 0 5% 0 0; }
     .details_accordion .detail .intro h3, .details_accordion .detail .intro .price-tiers .tier .price, .price-tiers .tier .details_accordion .detail .intro .price {
       float: right;
-      width: calc(100% - 5% - 80px);
+      width: calc(100% - 5% - 92px);
       font-family: "Open Sans", bold;
       color: #000;
       font-weight: bold;
       margin-bottom: .5em; }
     .details_accordion .detail .intro .description {
       float: right;
-      width: calc(100% - 5% - 80px); }
+      width: calc(100% - 5% - 92px); }
     .details_accordion .detail .intro:after {
       content: '\203A';
       display: block;
@@ -2205,18 +2205,19 @@ h1.demo-form__headline, .home-hero .home-hero__content h1 p.demo-form__headline 
       color: #FFF;
       border-radius: 50%;
       text-align: center;
-      line-height: 24px;
+      line-height: 25px;
       font-size: 36px;
       font-weight: bold; }
     @media (max-width: 767px) {
       .details_accordion .detail .intro {
-        padding-bottom: 60px; }
+        padding: 1em 8% 60px; }
         .details_accordion .detail .intro img {
-          width: 47px; }
+          width: 47px;
+          margin-bottom: .5em; }
         .details_accordion .detail .intro h3, .details_accordion .detail .intro .price-tiers .tier .price, .price-tiers .tier .details_accordion .detail .intro .price {
           width: calc( 100% - 5% - 47px);
           font-weight: normal;
-          margin-bottom: 1em;
+          margin: .25em 0 .5em;
           font-size: 16px;
           font-size: 1rem; }
         .details_accordion .detail .intro .description {
