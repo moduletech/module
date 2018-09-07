@@ -114,3 +114,41 @@ h3.section-header{
 	@include rem(font-size, 12px);
 	@include rem(margin, 0 auto 35px);
 }
+
+
+//HEADER with SUBHEADER
+.home-header, .double-header {
+  text-align: center;
+  margin: 0 auto 2em;
+  .title {
+    display: inline-block;
+    margin: 0 auto !important;
+    padding: 0 .25em;
+    @include rem(font-size, 60px);
+    color: $brand-blue;
+    border: 10px solid $light-gray;
+    text-transform: uppercase;
+    width: auto;
+  }
+  .subtitle {
+    @include rem(font-size,24px);
+    color: $text-gray;
+    margin: .5em auto;
+    font-family: $special-font-family;
+  }
+  @media (max-width: $screen-md) {
+    border: 10px solid $light-gray;
+    padding: .5em .25em;
+    .title {
+      border: none;
+      @include rem(font-size,32px);
+    }
+    .subtitle {
+      color: $brand-blue;
+      @include rem(font-size,16px);
+    }
+  }
+}
+
+
+

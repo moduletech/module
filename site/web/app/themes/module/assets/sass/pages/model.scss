@@ -4,130 +4,159 @@
 
 // Hero
 .model-header{
-//    background-color: #D1ECFF;
-    @include rem(padding, 90px 20px 0px);
-}
-
-p.model-header__copy {
+  display: flex;
+  flex-direction: column;
+  @include rem(padding, 90px 20px 0px);
+  @media(max-width: $screen-md) {
+    padding-top: 0;
+  }
+  p.model-header__copy {
     @include rem(font-size, 26px);
     @include rem(margin, 0px 0px 10px);
-}
-
-h1.model-header__title{
+    @media(max-width: $screen-md) {
+      order: 2;
+    }
+  }
+  h1.model-header__title{
     @include rem(font-size, 64px);
     margin: 0px 0px 5px;
-}
+    @media (max-width: $screen-md) {
+       @include rem(font-size, 32px);
+    }
+  }
+  .model-header__hero-image{
+    @media(max-width: $screen-md) {
+      order: 1;
+      margin-bottom: -2em;
+    }
+  }
 
-.model-header__hero-image{
-    @include rem(margin-top, 50px);
 }
 
 // Intro
 .model-intro{
-    //border-top: 2px solid $light-gray;
-    @include media(min-width $screen-xl) {
-        @include rem(padding, 50px 00px 100px);
-    }
-    @include media(max-width $screen-xl) {
-        @include rem(padding, 50px 20px 100px);
-    }
+  font-family: $special-font-family;
+  color: $text-gray;
+  padding: 4em 4% 8em;
+  //border-top: 2px solid $light-gray;
+  @include media(max-width $screen-md) {
+    padding: 1em 4% 4em;
+  }
 }
 
 .model-intro p{
-    @include rem(font-size, 28px);
+  @include rem(font-size, 28px);
+  color: $text-gray;
+  @media(max-width: $screen-md) {
+    @include rem('font-size',14px);
+    line-height: 2em;
+    text-align: left;
+  }
 }
 
 // Feature Set
-
 .model-features{
-    @include rem(padding, 0px 20px);
-    @include rem(margin-bottom, 160px);
-}
+  padding: 12px 12px;
+  margin-bottom: 8em;
+  max-width: 877px;
+  background: white;
 
-.model-feature{
+  .model-feature{
     border: 1px solid $border-gray;
     border-top: 5px solid $brand-blue;
     @include rem(padding, 20px 30px 30px);
-}
 
-.model-feature__icon{
-    @include rem(height, 160px);
-    @include rem(width, 160px);
-}
+    .model-feature__icon{
+      @include rem(height, 160px);
+      @include rem(width, 160px);
+    }
 
-.model-feature__number{
-    @include rem(font-size, 36px);
-    font-family: $headings-font-family;
-    line-height: 1;
-    margin: 0px;
-}
+    .model-feature__number{
+      @include rem(font-size, 36px);
+      font-family: $headings-font-family;
+      line-height: 1;
+      margin: 0px;
+    }
 
-.model-feature__text{
-    @include rem(font-size, 24px);
+    .model-feature__text{
+      @include rem(font-size, 24px);
+    }
+
+  }
+
+  @media (max-width: $screen-md) {
+    display: flex;
+    margin-bottom: 4em;
+    background: transparent;
+    .model-feature {
+      flex: 1;
+      border: none;
+      margin: 0;
+      padding: 0;
+      .model-feature__icon {
+        max-width: 48px;
+        height: auto;
+      }
+      .model-feature__number,
+      .model-feature__text {
+        @include rem('font-size',18px);
+        color: $brand-gray;
+        font-family: $headings-font-family;
+        display: inline-block;
+      }
+    }
+  }
+
 }
 
 
 // Floorplans
+.floorplan-header {
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
 .model-floorplan{
-    @include rem(padding, 50px 50px 0px);
-    background-color: #D1ECFF;
-}
+  padding: 4em 8em 4em;
+  background-color: #E9F4FE;
+  margin-bottom: 8em;
 
-.model-floorplan__floors{
+  .model-floorplan__floors{
     position: relative;
-}
-
-// New for Toby
-.model-floorplan__header{
-    // @include rem(left, 10px);
-    // @include rem(padding, 20px 60px 30px 0px);
-    // @include rem(top, 0px);
-    // border-top: 5px solid $brand-blue;
-    // position: absolute;
-    // z-index: 9;
-
-    left: 10px;
-    left: .625rem;
-    @include rem(left, 10px);
-    @include rem(padding, 20px 60px 30px 0);
-    top: 0;
-    border-top: 5px solid #1c496f;
-    @include media(max-width $screen-md) {
-        @include rem(padding, 20px 60px 30px 0);
-        z-index: 9;
-    }
-}
-
-.model-floorplan__nav-button{
+  }
+  .model-floorplan__nav-button{
     border: 3px solid $brand-black;
     color: $brand-black;
     text-align: left;
     &:hover{
-        background-color: $brand-yellow;
-        border-color: $brand-blue;
-        color: $brand-blue;
+      background-color: $brand-yellow;
+      border-color: $brand-blue;
+      color: $brand-blue;
     }
     @include media(max-width $screen-md) {
-        @include rem(margin-bottom, 5px);
-        display: block;
+      @include rem(margin-bottom, 5px);
+      display: block;
     }
-}
-// /Toby
-
-
-.model-floorplan__nav-button.active{
+  }
+  .model-floorplan__nav-button.active{
     background-color: $brand-yellow;
     border-color: $brand-blue;
     color: $brand-blue;
+  }
+
+  .model-floorplan__floor-img{
+    @include rem(padding-top, 40px);
+  }
+
 }
 
-.model-floorplan__floor-img{
-    @include rem(padding-top, 40px);
-}
+
 
 .model-form{
     @include rem(padding, 80px 20px 70px);
 }
+
+
 
 // Model CTA
 .model-demo-cta{
@@ -163,23 +192,161 @@ h1.model-header__title{
 	@include rem(padding, 10px 45px);
 }
 
+
+
+
+
+// PRICE TIERS
+.model-options {
+  padding: 0 4%;
+}
+.price-tiers {
+  @extend .centered-container;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 3em auto;
+  @media (max-width: $screen-xl) {
+    overflow-x: scroll;
+  }
+  .tier {
+    flex: 0 0 calc(100% / 3 - 4%);
+    box-shadow: $box-shadow;
+    background: white;
+    min-width: 310px;
+    margin: 0 2% 2em;
+    .title {
+      @extend .title-bar;
+    }
+    .price {
+      @include rem('font-size',40px);
+      @extend h3;
+      text-align: center;
+      small {
+        font-family: $special-font-family;
+        @include rem('font-size',20px);
+        display: block;
+        text-transform: lowercase;
+      }
+    }
+    .feature {
+      padding: 2em;
+      .name {
+        text-transform: uppercase;
+        border-bottom: 1px solid $light-gray;
+        padding-bottom: 8px;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+          padding-left: 32px;
+          position: relative;
+          &:before {
+            content: '';
+            @extend .checkmark;
+            position: absolute;
+            left: 0;
+            top: calc(50% - 12px);
+          }
+          .content {
+            font-family: $special-font-family;
+            small {
+              display: block;
+              @include rem('font-size',12px);
+              color: $brand-gray;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.disclaimer {
+  @extend .centered-container;
+  font-family: $special-font-family;
+  @include rem('font-size',20px);
+  color: $brand-gray;
+  padding: 0em 8% 4em;
+  @media (max-width: $screen-md) {
+    @include rem('font-size',12px);
+  }
+}
+
+.site-cost {
+  @extend .centered-container;
+  box-shadow: $box-shadow;
+  margin-bottom: 8em;
+  .title {
+    @extend .title-bar;
+    background: $border-gray;
+    font-family: $special-font-family;
+    text-transform: none;
+    padding: .5em;
+    @include rem('font-size',30px);
+    @media (max-width: $screen-md) {
+      @include rem('font-size',16px);
+    }
+  }
+  .costs {
+    text-align: center;
+    .cost {
+      padding: 2em 1em 3em;
+      @media (max-width: $screen-md) {
+        padding: 1em .25em 2em;
+      }
+      .name {
+        text-transform: uppercase;
+        @include rem('font-size',32px);
+        color: $brand-gray;
+        margin: 0 0 .25em;
+        @media (max-width: $screen-md) {
+          @include rem('font-size',12px);
+        }
+      }
+      strong {
+        font-family: $special-font-family;
+        @include rem('font-size',28px);
+        color: $brand-gray;
+        @media (max-width: $screen-md) {
+          @include rem('font-size',16px);
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 // Other Models
 .model-other-models{
-    @include rem(padding, 80px 20px 90px);
-}
-
-h2.model-other-models__headline{
+  @include rem(padding, 80px 20px 90px);
+  h2.model-other-models__headline{
     @include rem(font-size, 48px);
     @include rem(margin, 0px 0px 60px);
-}
-
-.model-other-model:first-child{
+    text-transform: uppercase;
+  }
+  .model-other-model:first-child{
     @include media(max-width $screen-md){
-        @include rem(margin-bottom, 80px);
+      @include rem(margin-bottom, 80px);
     }
-}
-
-.model-other-model__headline{
+  }
+  .model-other-model__headline{
     @include rem(font-size, 36px);
     @include rem(margin, 20px 0px 15px);
+    text-transform: uppercase;
+  }
+  @media (max-width: $screen-lg) {
+    display: none;
+  }
 }

@@ -1,0 +1,26 @@
+body {
+  background: $faint-gray;
+}
+
+.centered-container {
+  max-width: 1310px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.title-bar {
+  display: block;
+  background: $brand-blue;
+  color: #FFF;
+  padding: .25em .5em;
+  text-transform: uppercase;
+  text-align: center;
+  @include rem('font-size',40px);
+}
+
+.flex-columns {
+  display: flex;
+  .column {
+    flex: 1;
+  }
+}

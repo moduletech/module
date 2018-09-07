@@ -33,6 +33,41 @@
 
 
 
+
+<? if ( is_singular( 'models' ) ) { ?>
+    <section class="model-other-models u-border-bottom">
+        <div class="u-container">
+            <h2 class="model-other-models__headline u-text-center">Explore Other Modules</h2>
+            <?php
+            $id = get_the_ID();
+            $args = array(
+                'post_type' => 'models',
+                'posts_per_page' => 3,
+                'post__not_in' => array($id),
+            );
+            $query = new WP_Query($args);
+            if ($query->have_posts()) :
+                while ($query->have_posts()) : $query->the_post();?>
+                    <div class="model-other-model u-col-four u-text-center">
+                        <a href="<?php echo the_permalink(); ?>">
+                            <img class="u-img-responsive u-center-block" src="<?php the_field('hero_image'); ?>">
+                        </a>
+                        <h3 class="model-other-model__headline">
+                            <?php the_title();?>
+                        </h3>
+                        <a class="btn btn-outline-black" href="<?php echo the_permalink();?>">
+                            Explore
+                        </a>
+                    </div><!-- u-col-six -->
+                <?php endwhile;
+            endif;?>
+        </div><!-- /u-container-->
+    </section>
+<? } ?>
+
+
+
+
     <?php
     require('templates/_footer.php');
     wp_footer(); ?>

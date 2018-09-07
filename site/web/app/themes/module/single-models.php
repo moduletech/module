@@ -4,11 +4,11 @@
     <header class="model-header u-text-center">
         <div class="u-container-sm">
 
-            <?php if ($_GET['first_name']) {?>
+            <?php if (array_key_exists('first_name',$_GET)) {?>
                 <p class="model-header__copy"><?php echo ucfirst($_GET['first_name']);?>, based on your answers, we've selected</p>
                 <h1 class="model-header__title"><?php the_title();?></h1>
                 <p class="model-header__copy">as the right Module for you.</p>
-            <?php } else { ?>
+              <?php } else { ?>
                 <h1 class="model-header__title"><?php the_title();?></h1>
             <?php } ?>
 
@@ -41,15 +41,14 @@
         ?>
     </section>
 
+    <div class="double-header floorplan-header">
+      <h2 class="title">Layout</h2>
+      <h4 class="subtitle">View the base layout and explore the possibilities</h4>
+    </div>
+
     <section class="model-floorplan">
-        <div class="model-floorplan__floors u-container">
+      <div class="model-floorplan__floors u-container">
             <div class="model-floorplan__header">
-                <h2 class="model-floorplan__title">
-                    <?php the_field('configuration_title');?>
-                </h2>
-                <p class="model-floorplan__desc">
-                    <?php the_field('configuration_description');?>
-                </p>
                 <?php if (have_rows('configurations')) :
                     $counter = 1;
                     while (have_rows('configurations')) :
@@ -71,7 +70,7 @@
                     <div class="u-container model-floorplan__floor" data-tab-content="<?php the_sub_field('configuration_name'); ?>" class="model-floorplan__floor" <?php echo ($counter != 1 ? 'style="display: none"' : ''); ?>>
                         <!--<div class="u-col-eight model-floorplan__exterior">
                             <img src="<?php the_sub_field('exterior_image') ?>" class="u-img-responsive model-floorplan__floor-img">
-                        </div><!-- /u-col-six-->
+                        </div>-->
                         <div class="model-floorplan__interior">
                             <?php
                             if (have_rows('interior_images')) :
@@ -95,65 +94,62 @@
         </div><!-- /model-floorplan__floors-->
     </section>
 
-    <section class="model-form">
-        <div class="u-container">
-            <h2 class="mailing-list-headline">
-                Like What You See?
-            </h2>
-            <div class="mailing-list-form">
-                <?php echo do_shortcode('[gravityform id=8 title=false description=false ajax=true tabindex=49]'); ?>
+    <section class="model-options">
+      <div class="double-header">
+        <h2 class="title"><?php the_title();?> Options</h2>
+        <h4 class="subtitle">You're entitled to all of Module's essential services - consistent across all pricing tiers.</h4>
+      </div>
+
+      <div class="price-tiers">
+        <? $n=0;
+            $tier_names = get_field('tiers','options');
+            $tier_costs = get_field('tiers');
+            while($n < 3) {
+          ?>
+          <div class="tier">
+          <h3 class="title"><?= $tier_names['tier-'.($n+1)] ?></h3>
+            <div class="price">
+              <small>Starting at</small>
+              <span>$<?= number_format($tier_costs[$n]['cost']) ?>*</span>
+            </div>
+            <div class="feature">
+              <h3 class="name">Module's Services</h3>
+              <ul>
+                <li>
+                  <div class="content">
+                    <span>Something something</span>
+                    <small>Something else</small>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        <? $n++; } ?>
+        </div>
+        <p class="disclaimer"><? the_field('price_disclaimer','options') ?></p>
+        <div class="site-cost">
+          <?
+          $site_costs = get_field('site_cost');
+          ?>
+          <h3 class="title">Estimated Site Cost: <strong>$<?=number_format($site_costs['site'])?></strong></h3>
+          <div class="costs flex-columns">
+            <div class="cost column">
+              <h3 class="name">Sitework</h3>
+              <strong>$<?=number_format($site_costs['sitework'])?></strong>
+            </div>
+            <div class="cost column">
+              <h3 class="name">Permits &amp; Meter Fees</h3>
+              <strong>$<?=number_format($site_costs['permits'])?></strong>
+            </div>
+            <div class="cost column">
+              <h3 class="name">Foundation</h3>
+              <strong>$<?=number_format($site_costs['foundation'])?></strong>
             </div>
         </div>
-    </section>
 
-    <section class="model-demo-cta">
-        <div class="u-container">
-            <div class="model-demo-cta__content">
-                <h2 class="model-demo-cta__headline">
-                    Want to see a Module in person?
-                </h2>
-                <p class="model-demo-cta__copy">
-                    Schedule an in-person tour of our demo unit today!
-                </p>
-            </div><!-- /model-demo-cta__content-->
-            <div class="model-demo-cta__button">
-                <a href="<?php echo bloginfo('url');?>/demo/" target="_blank" class="btn btn-outline-black">Schedule</a>
-            </div>
-        </div>
     </section>
-
-    <section class="model-other-models u-border-bottom">
-        <div class="u-container">
-            <h2 class="model-other-models__headline u-text-center">Explore Other Modules</h2>
-            <?php
-            $id = get_the_ID();
-            $args = array(
-                'post_type' => 'models',
-                'posts_per_page' => 3,
-                'post__not_in' => array($id),
-            );
-            $query = new WP_Query($args);
-            if ($query->have_posts()) :
-                while ($query->have_posts()) : $query->the_post();?>
-                    <div class="model-other-model u-col-four u-text-center">
-                        <a href="<?php echo the_permalink(); ?>">
-                            <img class="u-img-responsive u-center-block" src="<?php the_field('hero_image'); ?>">
-                        </a>
-                        <h3 class="model-other-model__headline">
-                            <?php the_title();?>
-                        </h3>
-                        <a class="btn btn-outline-black" href="<?php echo the_permalink();?>">
-                            Explore
-                        </a>
-                    </div><!-- u-col-six -->
-                <?php endwhile;
-            endif;?>
-        </div><!-- /u-container-->
-    </section>
-
 
 </main>
 
 
-<?php include('templates/_mailing-list.php');
-get_footer();?>
+<?get_footer();?>

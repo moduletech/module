@@ -16,10 +16,12 @@
     "url": "http://inquiri.com"
   },
   "dependencies": {
-    "laravel-elixir": "^5.0.0"
+    "laravel-elixir": "^5.0.0",
+    "libnotify": "^1.0.4"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-imagemin": "^3.0.2"
+    "gulp-imagemin": "^3.0.2",
+    "gulp-notify": "^3.2.0"
   }
 }
