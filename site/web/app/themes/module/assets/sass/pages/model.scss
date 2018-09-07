@@ -117,44 +117,89 @@
 }
 
 .model-floorplan{
-  padding: 4em 8em 4em;
+  padding: 4em 8% 0;
   background-color: #E9F4FE;
   margin-bottom: 8em;
 
   .model-floorplan__floors{
     position: relative;
-  }
-  .model-floorplan__nav-button{
-    border: 3px solid $brand-black;
-    color: $brand-black;
-    text-align: left;
-    &:hover{
-      background-color: $brand-yellow;
-      border-color: $brand-blue;
-      color: $brand-blue;
-    }
-    @include media(max-width $screen-md) {
-      @include rem(margin-bottom, 5px);
-      display: block;
-    }
-  }
-  .model-floorplan__nav-button.active{
-    background-color: $brand-yellow;
-    border-color: $brand-blue;
-    color: $brand-blue;
-  }
 
-  .model-floorplan__floor-img{
-    @include rem(padding-top, 40px);
-  }
+    .model-floorplan__header {
+      @include media(min-width $screen-md) {
+        display: flex;
+      }
+      justify-content: center;
+      text-align: center;
 
+      .model-floorplan__nav-button{
+        @include media(min-width $screen-md) {
+          color: $brand-black;
+          text-align: left;
+          margin: 0 2em 2em;
+          border-bottom: 4px solid rgba(0,0,0,0);
+          small {
+            display: block;
+          }
+          &:hover {
+            border-color: $border-gray;
+          }
+          &.active {
+            border-color: $brand-blue;
+          }
+        }
+        @include media(max-width $screen-md) {
+          margin: 0 .5em .5em;
+          border: 4px solid $brand-blue;
+          color: $brand-blue;
+          display: inline-block;
+          text-align: left;
+          @include rem('font-size',16px);
+          small {
+            float: right;
+            text-align: right;
+            line-height: 1.6em;
+            padding-left: 1em;
+            @include rem('font-size',14px);
+          }
+          &:hover {
+            background: $brand-gray;
+            color: white;
+          }
+          &.active {
+            background: $brand-blue;
+            color: white;
+          }
+        }
+      }
+    }
+
+    .model-floorplan__interior {
+      display: flex;
+      overflow-x: scroll;
+      margin-bottom: 2em;
+      .interior_image {
+        min-width: 320px;
+        width: 100%;
+        max-width: 640px;
+        height: auto;
+        margin: 0 2%;
+        .model-floorplan__floor-img{
+          @include rem(padding-top, 20px);
+        }
+        .model-floorplan__label {
+          text-align: center;
+          font-family: $special-font-family;
+          font-weight: bold;
+          padding-top: 1em;
+        }
+      }
+    }
+
+  }
 }
 
 
 
-.model-form{
-    @include rem(padding, 80px 20px 70px);
-}
 
 
 

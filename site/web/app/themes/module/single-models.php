@@ -76,9 +76,9 @@
                             if (have_rows('interior_images')) :
                                 while (have_rows('interior_images')) :
                                 the_row();?>
-                                <div class="u-col-six">
+                                <div class="interior_image u-col-six">
                                     <img src="<?php the_sub_field('interior_image') ;?>" class="u-img-responsive model-floorplan__floor-img">
-                                    <p class="model-floorplan__label"><?php the_sub_field('interior_image_label') ?></p>
+                                    <p class="model-floorplan__label"><?php the_sub_field('interior_image_label') ?>:</p>
                                 </div>
                             <?php
                             endwhile;

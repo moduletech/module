@@ -2547,35 +2547,72 @@ h1.demo-form__headline, .home-hero .home-hero__content h1 p.demo-form__headline 
   margin-right: 4%; }
 
 .model-floorplan {
-  padding: 4em 8em 4em;
+  padding: 4em 8% 0;
   background-color: #E9F4FE;
   margin-bottom: 8em; }
   .model-floorplan .model-floorplan__floors {
     position: relative; }
-  .model-floorplan .model-floorplan__nav-button {
-    border: 3px solid #143753;
-    color: #143753;
-    text-align: left; }
-    .model-floorplan .model-floorplan__nav-button:hover {
-      background-color: #fdba4f;
-      border-color: #1C496F;
-      color: #1C496F; }
-    @media screen and (max-width: 767px) {
-      .model-floorplan .model-floorplan__nav-button {
-        margin-bottom: 5px;
-        margin-bottom: 0.3125rem;
-        display: block; } }
-  .model-floorplan .model-floorplan__nav-button.active {
-    background-color: #fdba4f;
-    border-color: #1C496F;
-    color: #1C496F; }
-  .model-floorplan .model-floorplan__floor-img {
-    padding-top: 40px;
-    padding-top: 2.5rem; }
-
-.model-form {
-  padding: 80px 20px 70px;
-  padding: 5rem 1.25rem 4.375rem; }
+    .model-floorplan .model-floorplan__floors .model-floorplan__header {
+      -ms-flex-pack: center;
+      justify-content: center;
+      text-align: center; }
+      @media screen and (min-width: 767px) {
+        .model-floorplan .model-floorplan__floors .model-floorplan__header {
+          display: -ms-flexbox;
+          display: flex; } }
+      @media screen and (min-width: 767px) {
+        .model-floorplan .model-floorplan__floors .model-floorplan__header .model-floorplan__nav-button {
+          color: #143753;
+          text-align: left;
+          margin: 0 2em 2em;
+          border-bottom: 4px solid transparent; }
+          .model-floorplan .model-floorplan__floors .model-floorplan__header .model-floorplan__nav-button small {
+            display: block; }
+          .model-floorplan .model-floorplan__floors .model-floorplan__header .model-floorplan__nav-button:hover {
+            border-color: #cccccc; }
+          .model-floorplan .model-floorplan__floors .model-floorplan__header .model-floorplan__nav-button.active {
+            border-color: #1C496F; } }
+      @media screen and (max-width: 767px) {
+        .model-floorplan .model-floorplan__floors .model-floorplan__header .model-floorplan__nav-button {
+          margin: 0 .5em .5em;
+          border: 4px solid #1C496F;
+          color: #1C496F;
+          display: inline-block;
+          text-align: left;
+          font-size: 16px;
+          font-size: 1rem; }
+          .model-floorplan .model-floorplan__floors .model-floorplan__header .model-floorplan__nav-button small {
+            float: right;
+            text-align: right;
+            line-height: 1.6em;
+            padding-left: 1em;
+            font-size: 14px;
+            font-size: 0.875rem; }
+          .model-floorplan .model-floorplan__floors .model-floorplan__header .model-floorplan__nav-button:hover {
+            background: #6C6C6C;
+            color: white; }
+          .model-floorplan .model-floorplan__floors .model-floorplan__header .model-floorplan__nav-button.active {
+            background: #1C496F;
+            color: white; } }
+    .model-floorplan .model-floorplan__floors .model-floorplan__interior {
+      display: -ms-flexbox;
+      display: flex;
+      overflow-x: scroll;
+      margin-bottom: 2em; }
+      .model-floorplan .model-floorplan__floors .model-floorplan__interior .interior_image {
+        min-width: 320px;
+        width: 100%;
+        max-width: 640px;
+        height: auto;
+        margin: 0 2%; }
+        .model-floorplan .model-floorplan__floors .model-floorplan__interior .interior_image .model-floorplan__floor-img {
+          padding-top: 20px;
+          padding-top: 1.25rem; }
+        .model-floorplan .model-floorplan__floors .model-floorplan__interior .interior_image .model-floorplan__label {
+          text-align: center;
+          font-family: "Open Sans", bold;
+          font-weight: bold;
+          padding-top: 1em; }
 
 .model-demo-cta {
   background-color: #fdba4f;
