@@ -411,6 +411,29 @@ body {
     -ms-flex: 1;
     flex: 1; }
 
+header.panel {
+  display: -ms-flexbox;
+  display: flex;
+  padding: 4%;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  background-position: 50%;
+  background-size: cover;
+  height: 569px; }
+  @media (min-width: 910px) {
+    header.panel {
+      font-size: 48px;
+      font-size: 3rem; } }
+  @media (min-width: 1100px) {
+    header.panel {
+      font-size: 62px;
+      font-size: 3.875rem; } }
+  header.panel * {
+    color: white; }
+
 button,
 input[type="button"],
 input[type="reset"],
@@ -2086,7 +2109,7 @@ h1.demo-form__headline, .home-hero .home-hero__content h1 p.demo-form__headline 
             flex: 1;
             text-align: center; }
             .home-models .u-container .home .spec .features .feature img {
-              width: 38px;
+              width: 60px;
               height: auto; }
             .home-models .u-container .home .spec .features .feature span {
               display: block;
@@ -2174,7 +2197,8 @@ h1.demo-form__headline, .home-hero .home-hero__content h1 p.demo-form__headline 
     padding: 2em 120px 2em 4%;
     overflow: hidden;
     z-index: 2;
-    position: relative; }
+    position: relative;
+    background: white; }
     .details_accordion .detail .intro img {
       float: left;
       height: auto;
@@ -3118,6 +3142,26 @@ h2.team-member__name {
 .press-main + .blog-main {
   padding-top: 40px;
   padding-bottom: 40px; }
+
+.faqs.details_accordion {
+  margin-bottom: 8em; }
+  .faqs.details_accordion .detail:first-of-type .intro {
+    margin-top: -100px; }
+  .faqs.details_accordion .detail .intro * {
+    width: 100%;
+    color: #1C496F; }
+    .faqs.details_accordion .detail .intro *:first-child {
+      padding-top: .25em; }
+  .faqs.details_accordion .detail .more {
+    margin: 0;
+    padding: 0; }
+    .faqs.details_accordion .detail .more .sub_detail {
+      background: transparent;
+      padding: 0 4%;
+      font-family: "Open Sans", bold;
+      font-size: 20px;
+      font-size: 1.25rem;
+      color: #6C6C6C; }
 
 .gform_wrapper {
   max-width: 100%;

@@ -1,0 +1,35 @@
+.faqs.details_accordion {
+
+  margin-bottom: 8em;
+
+  .detail {
+    &:first-of-type {
+      .intro {
+        margin-top: -100px;
+      }
+    }
+
+    .intro {
+      * {
+        width: 100%;
+        color: $brand-blue;
+        &:first-child {
+          padding-top: .25em;
+        }
+      }
+    }
+    .more {
+      margin: 0;
+      padding: 0;
+      .sub_detail {
+        background: transparent;
+        padding: 0 4%;
+        font-family: $special-font-family;
+        @include rem('font-size',20px);
+        color: $brand-gray;
+      }
+    }
+
+  }
+
+}
