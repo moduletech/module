@@ -339,14 +339,19 @@
   }
   .costs {
     text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 1em 1em;
     .cost {
-      padding: 2em 1em 3em;
+      padding: 2em 1em 2em;
+      flex: 0 0 auto;
       @media (max-width: $screen-md) {
         padding: 1em .25em 2em;
       }
       .name {
         text-transform: uppercase;
-        @include rem('font-size',32px);
+        @include rem('font-size',28px);
         color: $brand-gray;
         margin: 0 0 .25em;
         @media (max-width: $screen-md) {
@@ -360,6 +365,15 @@
         @media (max-width: $screen-md) {
           @include rem('font-size',16px);
         }
+      }
+    }
+    .math {
+      font-weight: bold;
+      font-family: $special-font-family;
+      @include rem('font-size',32px);
+      color: $brand-gray;
+      @media (max-width: $screen-md) {
+        @include rem('font-size',20px);
       }
     }
   }

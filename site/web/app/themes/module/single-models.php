@@ -97,7 +97,7 @@
     <section class="model-options">
       <div class="double-header">
         <h2 class="title"><?php the_title();?> Options</h2>
-        <h4 class="subtitle">You're entitled to all of Module's essential services - consistent across all pricing tiers.</h4>
+        <!--<h4 class="subtitle">You're entitled to all of Module's essential services - consistent across all pricing tiers.</h4>-->
       </div>
 
       <div class="price-tiers">
@@ -144,21 +144,28 @@
           <?
           $site_costs = get_field('site_cost');
           ?>
-          <h3 class="title">Estimated Site Cost: <strong>$<?=number_format($site_costs['site'])?></strong></h3>
+          <h3 class="title">Estimated Site Cost</strong></h3>
           <div class="costs flex-columns">
             <div class="cost column">
               <h3 class="name">Sitework</h3>
               <strong>$<?=number_format($site_costs['sitework'])?></strong>
             </div>
-            <div class="cost column">
-              <h3 class="name">Permits &amp; Meter Fees</h3>
-              <strong>$<?=number_format($site_costs['permits'])?></strong>
-            </div>
+            <div class="math column">+</div>
             <div class="cost column">
               <h3 class="name">Foundation</h3>
               <strong>$<?=number_format($site_costs['foundation'])?></strong>
             </div>
-        </div>
+            <div class="math column">+</div>
+            <div class="cost column">
+              <h3 class="name">Permits &amp; Meter Fees</h3>
+              <strong>$<?=number_format($site_costs['permits'])?></strong>
+            </div>
+            <div class="math column">=</div>
+            <div class="cost column">
+              <h3 class="name">Total Estimated Site Cost</h3>
+              <strong>$<?=number_format($site_costs['foundation'])?></strong>
+            </div>
+       </div>
 
     </section>
 
