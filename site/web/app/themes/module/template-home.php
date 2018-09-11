@@ -141,7 +141,7 @@ if (have_rows('home_content')) :
                 ?>
                 <div class="detail">
                   <div class="intro">
-                    <img src="<?= get_sub_field('graphic') ?>" alt="" />
+                    <? if(get_sub_field('graphic')) { ?><img src="<?= get_sub_field('graphic') ?>" alt="" /><? } ?>
                     <h3><?= get_sub_field('title') ?></h3>
                     <div class="description"><?= get_sub_field('description') ?></div>
                   </div>
