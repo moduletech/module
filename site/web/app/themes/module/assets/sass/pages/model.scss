@@ -117,7 +117,7 @@
 }
 
 .model-floorplan{
-  padding: 4em 8% 0;
+  padding: 4em 4% 0;
   background-color: #E9F4FE;
   margin-bottom: 8em;
 
@@ -175,12 +175,13 @@
 
     .model-floorplan__interior {
       display: flex;
-      overflow-x: scroll;
+      overflow-x: auto;
       margin-bottom: 2em;
       .interior_image {
         min-width: 320px;
-        width: 100%;
+        width: 60%;
         max-width: 640px;
+        flex: 0 0 auto;
         height: auto;
         margin: 0 2%;
         .model-floorplan__floor-img{
@@ -260,6 +261,7 @@
     background: white;
     min-width: 310px;
     margin: 0 2% 2em;
+    padding-bottom: 1em;
     .title {
       @extend .title-bar;
     }
