@@ -74,3 +74,33 @@ jQuery(window).scroll(function($) {
        head.removeClass('js-active');
     }
 });
+
+
+/* Normalize Parallel Child Heights */
+function normalizeHeights() {
+  var maxHeight = [];
+  jQuery('.normalizeWrapper').each( function() {
+    // Determine max-height of each element number
+    jQuery(this).find('.normalizeContainer').each( function() {
+      var n = 0;
+      jQuery(this).find('.normalizeElement').each( function() {
+        n++;
+        jQuery(this).css('height','');
+        var height = this.clientHeight;
+        if( height >= maxHeight[n] || !maxHeight[n] ) {
+          maxHeight[n] = height;
+        }
+      });
+    });
+    // foreach Element Number, apply the maxHeight as the height
+    var items = maxHeight.length - 1;
+    while(items > 0) {
+      jQuery(this).find(".normalizeElement-"+items).each( function() {
+        jQuery(this).css('height',maxHeight[items]);
+      });
+      items--;
+    }
+  });
+}
+jQuery(document).ready( function() { normalizeHeights(); });
+jQuery(window).resize( function() { normalizeHeights(); });

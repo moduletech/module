@@ -100,22 +100,24 @@
         <!--<h4 class="subtitle">You're entitled to all of Module's essential services - consistent across all pricing tiers.</h4>-->
       </div>
 
-      <div class="price-tiers">
+      <div class="price-tiers normalizeWrapper">
         <? $n=0;
             $tiers = get_field('tiers','options')['tier'];
             $tier_costs = get_field('tiers');
             while($n < 3) {
           ?>
-          <div class="tier">
+          <div class="tier normalizeContainer">
           <h3 class="title"><?= $tiers[$n]['name'] ?></h3>
             <div class="price">
               <small>Starting at</small>
               <span>$<?= number_format($tier_costs[$n]['cost']) ?>*</span>
             </div>
             <?
+            $f=0;
             foreach($tiers[$n]['features'] as $feature) {
+            $f++;
             ?>
-              <div class="feature">
+              <div class="feature normalizeElement normalizeElement-<?=$f?>">
                 <h3 class="name"><?= $feature['name'] ?></h3>
                 <ul>
                   <?
