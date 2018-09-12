@@ -164,7 +164,7 @@
             </div>
             <div class="math column">=</div>
             <div class="cost column">
-              <strong>$<?=number_format($site_costs['foundation'])?></strong>
+              <strong>$<?=number_format($site_costs['site'])?></strong>
             </div>
        </div>
 
