@@ -344,12 +344,12 @@
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    padding: 0 1em 1em;
+    padding: 0 4% 1em;
     .cost {
       padding: 2em 1em 2em;
       flex: 0 0 auto;
       @media (max-width: $screen-md) {
-        padding: 1em .25em 2em;
+        padding: 1em .25em 1em;
       }
       .name {
         text-transform: uppercase;
@@ -366,6 +366,15 @@
         color: $brand-gray;
         @media (max-width: $screen-md) {
           @include rem('font-size',16px);
+        }
+      }
+      &:last-of-type {
+        strong {
+          @include rem('font-size',36px);
+          padding: 0 1em;
+          @media (max-width: $screen-md) {
+            @include rem('font-size',20px);
+          }
         }
       }
     }

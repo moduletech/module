@@ -146,7 +146,7 @@
           <?
           $site_costs = get_field('site_cost');
           ?>
-          <h3 class="title">Estimated Site Cost</strong></h3>
+          <h3 class="title">Additional Estimated Costs</strong></h3>
           <div class="costs flex-columns">
             <div class="cost column">
               <h3 class="name">Sitework</h3>
@@ -164,7 +164,6 @@
             </div>
             <div class="math column">=</div>
             <div class="cost column">
-              <h3 class="name">Total Estimated Site Cost</h3>
               <strong>$<?=number_format($site_costs['foundation'])?></strong>
             </div>
        </div>
