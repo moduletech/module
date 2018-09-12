@@ -120,6 +120,7 @@
   padding: 4em 4% 0;
   background-color: #E9F4FE;
   margin-bottom: 8em;
+	max-width:1350px;
 
   .model-floorplan__floors{
     position: relative;
@@ -174,6 +175,7 @@
     }
 
     .model-floorplan__interior {
+			max-width: 1350px;
       display: flex;
       overflow-x: auto;
       margin-bottom: 2em;
