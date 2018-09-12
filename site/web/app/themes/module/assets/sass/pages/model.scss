@@ -118,12 +118,16 @@
 
 .model-floorplan{
   padding: 4em 4% 0;
-  background-color: #E9F4FE;
+  background-color: #D1ECFF;
   margin-bottom: 8em;
-	max-width:1350px;
 
   .model-floorplan__floors{
     position: relative;
+		max-width:1350px;
+
+		.u-container{
+			max-width:1350px;
+		}
 
     .model-floorplan__header {
       @include media(min-width $screen-md) {
