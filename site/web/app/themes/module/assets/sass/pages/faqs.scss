@@ -1,35 +1,38 @@
-.faqs.details_accordion {
+.faqs {
 
-  margin-bottom: 8em;
+  @include rem(padding, 20px 0px 60px);
 
-  .detail {
-    &:first-of-type {
-      .intro {
-        margin-top: -100px;
-      }
-    }
-
-    .intro {
-      * {
-        width: 100%;
-        color: $brand-blue;
-        &:first-child {
-          padding-top: .25em;
+  .details_accordion {
+    .detail {
+      &:first-of-type {
+        .intro {
+          // margin-top: -100px;
         }
       }
-    }
-    .more {
-      margin: 0;
-      padding: 0;
-      .sub_detail {
-        background: transparent;
-        padding: 0 4%;
-        font-family: $special-font-family;
-        @include rem('font-size',20px);
-        color: $brand-gray;
-      }
-    }
 
+      .intro {
+        * {
+          text-transform: none;
+          width: 100%;
+          color: $brand-blue;
+          &:first-child {
+            padding-top: .25em;
+          }
+        }
+      }
+      .more {
+        margin: 0;
+        padding: 0;
+        .sub_detail {
+          background: transparent;
+          padding: 0 4%;
+          font-family: $special-font-family;
+          @include rem('font-size',20px);
+          color: $brand-gray;
+        }
+      }
+
+    }
   }
 
 }

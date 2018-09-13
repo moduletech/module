@@ -185,11 +185,12 @@
       margin-bottom: 2em;
       .interior_image {
         min-width: 320px;
-        width: 60%;
+        width: 47%;
+        padding: 0 1%;
         max-width: 640px;
         flex: 0 0 auto;
         height: auto;
-        margin: 0 2%;
+        margin: 0 auto;
         .model-floorplan__floor-img{
           @include rem(padding-top, 20px);
         }
