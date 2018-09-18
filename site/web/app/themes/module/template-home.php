@@ -115,7 +115,7 @@ if (have_rows('home_content')) :
                       </div>
                       <? } } ?>
                     </div>
-                    <a class="link" href="<?=$permalink?>">View Design</a>
+                    <a class="link btn btn-outline-black" href="<?=$permalink?>">View Design</a>
                   </div>
                 </div>
                 <?
