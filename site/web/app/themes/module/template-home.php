@@ -100,9 +100,7 @@ if (have_rows('home_content')) :
                 ?>
                 <div class="home">
                   <h3 class="mobile_title"><?=$title?></h3>
-                  	<a class="hero-image" href="<?=$permalink?>">
-											<div class="img" style="background-image:url(<?=$hero_image?>)"></div>
-										</a>
+                  <a href="<?=$permalink?>" class="img" style="background-image:url(<?=$hero_image?>)"></a>
                   <div class="content">
                     <h3 class="title"><?=$title?></h3>
                     <div class="description"><?=$hero_copy?></div>
@@ -117,7 +115,7 @@ if (have_rows('home_content')) :
                       </div>
                       <? } } ?>
                     </div>
-                    <a class="link" href="<?=$permalink?>">View Design</a>
+                    <a class="link btn btn-outline-black" href="<?=$permalink?>">View Design</a>
                   </div>
                 </div>
                 <?

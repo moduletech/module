@@ -53,7 +53,7 @@
 		@include rem(padding, 5px 0px);
 	}
 	display: inline-block;
-	@include rem(padding, 0px 10px);
+	@include rem(padding, 0px 8px);
 }
 
 .menu-item a{
@@ -63,6 +63,7 @@
 	@include rem(font-size, 18px);
 	&:hover{
 		color: $brand-yellow;
+    border-bottom: 2px solid $brand-yellow;
 	}
 }
 
@@ -114,6 +115,45 @@
 
 .nav-primary__toggle-icon:hover path{
 	fill: $brand-yellow;
+}
+
+
+// Header Nav Collapsible Sub-Menu
+.nav-primary__collapse ul.nav-links {
+  @include media(min-width $screen-md) {
+    & > li {
+      padding: 1.75em .5em;
+      margin: -1.75em 0;
+      &:hover {
+        & ul {
+          left: auto;
+        }
+      }
+      ul {
+        position: absolute;
+        margin: 0 -1.625em;
+        padding: 1em;
+        top: 100%;
+        left: 1000vw;
+        background: $light-gray;
+        li {
+          display: block;
+          a {
+            display: inline-block;
+            padding: .25em 0;
+            border: none;
+          }
+        }
+      }
+    }
+  }
+  @include media(max-width $screen-md) {
+    ul {
+      margin-top: .5em;
+      padding: .5em 0 .5em .5em;
+      background: $light-gray;
+    }
+  }
 }
 
 

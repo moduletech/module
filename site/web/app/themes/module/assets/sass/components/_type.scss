@@ -120,7 +120,7 @@ h3.section-header{
 //HEADER with SUBHEADER
 .home-header, .double-header {
   text-align: center;
-  margin: 0 auto 2em;
+  margin: 0 auto 1em;
   .title {
     display: inline-block;
     margin: 0 auto !important;
@@ -136,6 +136,7 @@ h3.section-header{
     color: $text-gray;
     margin: .5em auto;
     font-family: $special-font-family;
+    text-transform: none;
   }
   @media (max-width: $screen-md) {
     border: 10px solid $light-gray;

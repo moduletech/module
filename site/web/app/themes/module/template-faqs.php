@@ -5,14 +5,14 @@ get_header();?>
 
 <main class="main" itemscope itemType="https://schema.org/WebPage">
 
-<header
-  class="panel"
-  style="background-image: url(<?=get_the_post_thumbnail_url()?>);"
->
-  <h1><?= get_the_title() ?></h1>
-</header>
+<section class="faqs">
 
-<section class="faqs details_accordion">
+  <div class="double-header">
+    <h2 class="title"><?= get_the_title() ?></h2>
+    <!--<h4 class="subtitle">Subtext</h4>-->
+  </div>
+
+  <section class="details_accordion">
     <?
     if(have_rows('faqs')):
       while(have_rows('faqs')):
@@ -40,9 +40,9 @@ get_header();?>
       })
     });
   </script>
+  </section>
+
 </section>
-
-
 
 </main>
 
