@@ -67,40 +67,44 @@
 
 
 
-
-// Single Post Typopgrahy
-.blog-content h3{
-  @include rem(margin, 40px 0px 10px);
-  @include rem(font-size, 20px)
-}
-
-.blog-content p{
-	@include rem(margin-bottom, 20px);
-}
-
-.blog-content ul {
-  @include rem(margin-bottom, 20px);
-}
-
-.blog-content ul li{
-  line-height: 1.5;
-  @include rem(margin-bottom, 10px);
-}
-
-.blog-content a{
-  color: $brand-yellow;
-  &:hover{
-    color: darken($brand-yellow, 5%);
+.blog-single {
+  max-width: 862px;
+  width: 100%;
+  margin: 0 auto;
+  .double-header {
+    border: none;
+    h2 {
+      border: none;
+      border-bottom: 1px solid $brand-black;
+      width: 92%;
+      color: $brand-black;
+    }
   }
+  .blog-loop {
+    &__post-image {
+      float: none;
+      margin: 2em auto;
+      img {
+        width: 100%;
+        max-height: 320px;
+        height: 32vw;
+      }
+    }
+    &__post-content {
+      background: transparent;
+      padding: 2em 1em;
+    }
+  }
+  .blog-social {
+    margin: 4em auto;
+  }
+
 }
 
-.blog-social hr{
-    max-width: 50px;
-    margin: 0px 0px 20px;
-    border: 0px;
-    border-top: 2px solid #000;
-    height: 1px;
-}
+
+
+
+
 
 // Images
 .wp-post-image{

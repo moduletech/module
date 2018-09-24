@@ -1613,36 +1613,29 @@ h2.mailing-list-headline {
         height: 2.8em;
         overflow: hidden; }
 
-.blog-content h3, .blog-content .price-tiers .tier .price, .price-tiers .tier .blog-content .price {
-  margin: 40px 0 10px;
-  margin: 2.5rem 0 0.625rem;
-  font-size: 20px;
-  font-size: 1.25rem; }
-
-.blog-content p {
-  margin-bottom: 20px;
-  margin-bottom: 1.25rem; }
-
-.blog-content ul {
-  margin-bottom: 20px;
-  margin-bottom: 1.25rem; }
-
-.blog-content ul li {
-  line-height: 1.5;
-  margin-bottom: 10px;
-  margin-bottom: 0.625rem; }
-
-.blog-content a {
-  color: #fdba4f; }
-  .blog-content a:hover {
-    color: #fdb036; }
-
-.blog-social hr {
-  max-width: 50px;
-  margin: 0px 0px 20px;
-  border: 0px;
-  border-top: 2px solid #000;
-  height: 1px; }
+.blog-single {
+  max-width: 862px;
+  width: 100%;
+  margin: 0 auto; }
+  .blog-single .double-header {
+    border: none; }
+    .blog-single .double-header h2 {
+      border: none;
+      border-bottom: 1px solid #143753;
+      width: 92%;
+      color: #143753; }
+  .blog-single .blog-loop__post-image {
+    float: none;
+    margin: 2em auto; }
+    .blog-single .blog-loop__post-image img {
+      width: 100%;
+      max-height: 320px;
+      height: 32vw; }
+  .blog-single .blog-loop__post-content {
+    background: transparent;
+    padding: 2em 1em; }
+  .blog-single .blog-social {
+    margin: 4em auto; }
 
 .wp-post-image {
   margin: 10px 0 20px;
