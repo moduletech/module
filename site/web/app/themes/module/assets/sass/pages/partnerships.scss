@@ -1,0 +1,39 @@
+.partnerships {
+  padding: 0 4% 2em;
+
+  h3 {
+    position: relative;
+    display: inline-block;
+    font-size: 200%;
+    color: $brand-black;
+    padding: 16px;
+    &:after {
+      content: '';
+      border-bottom: 1px solid $brand-black;
+      width: 209px;
+      position: absolute;
+      top: 100%;
+      left: -16px;
+    }
+  }
+  .partners {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1em;
+    a {
+      margin: 1em 4em 1em 0;
+      &:last-of-type{
+        margin-right: 0;
+      }
+      img {
+        height: 160px;
+        max-width: 250px;
+        object-fit: contain;
+      }
+    }
+  }
+
+}

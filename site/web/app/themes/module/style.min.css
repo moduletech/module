@@ -3236,6 +3236,41 @@ h2.team-member__name {
       font-size: 1.25rem;
       color: #6C6C6C; }
 
+.partnerships {
+  padding: 0 4% 2em; }
+  .partnerships h3, .partnerships .price-tiers .tier .price, .price-tiers .tier .partnerships .price {
+    position: relative;
+    display: inline-block;
+    font-size: 200%;
+    color: #143753;
+    padding: 16px; }
+    .partnerships h3:after, .partnerships .price-tiers .tier .price:after, .price-tiers .tier .partnerships .price:after {
+      content: '';
+      border-bottom: 1px solid #143753;
+      width: 209px;
+      position: absolute;
+      top: 100%;
+      left: -16px; }
+  .partnerships .partners {
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 1em; }
+    .partnerships .partners a {
+      margin: 1em 4em 1em 0; }
+      .partnerships .partners a:last-of-type {
+        margin-right: 0; }
+      .partnerships .partners a img {
+        height: 160px;
+        max-width: 250px;
+        object-fit: contain; }
+
 .gform_wrapper {
   max-width: 100%;
   font-family: HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
