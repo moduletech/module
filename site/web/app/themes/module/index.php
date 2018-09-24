@@ -17,7 +17,7 @@ get_header(); ?>
 	<div class="u-container">
 
     <div class="double-header">
-      <h2 class="title"><?= get_the_title() ?></h2>
+      <h2 class="title">Blog</h2>
       <!--<h4 class="subtitle">Subtext</h4>-->
     </div>
 
