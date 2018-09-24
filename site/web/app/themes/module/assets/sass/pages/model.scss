@@ -80,6 +80,7 @@
 
     .model-feature__text{
       @include rem(font-size, 24px);
+      text-transform: capitalize;
     }
 
   }

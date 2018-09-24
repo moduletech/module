@@ -48,6 +48,7 @@
       p {
         @extend h1;
         font-weight: normal;
+        text-transform: none;
       }
       small {
         @include rem(font-size, 67%);

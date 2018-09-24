@@ -815,7 +815,8 @@ input[type="checkbox"] {
 
 .site-header {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  background: white; }
+  background: white;
+  position: relative; }
   @media screen and (min-width: 600px) {
     .site-header {
       padding: 20px;
@@ -936,7 +937,8 @@ input[type="checkbox"] {
       padding: 1em;
       top: 100%;
       left: 1000vw;
-      background: #f2f2f2; }
+      background: #f2f2f2;
+      z-index: 2; }
       .nav-primary__collapse ul.nav-links > li ul li {
         display: block; }
         .nav-primary__collapse ul.nav-links > li ul li a {
@@ -988,16 +990,14 @@ input[type="checkbox"] {
   top: 32px; }
 
 @media screen and (min-width: 600px) {
-  .nav-primary .primary-nav__logo,
-  .nav-primary__home .primary-nav__logo {
+  .primary-nav__logo {
     height: 50px;
     height: 3.125rem;
     width: 260px;
     width: 16.25rem; } }
 
 @media screen and (max-width: 600px) {
-  .nav-primary .primary-nav__logo,
-  .nav-primary__home .primary-nav__logo {
+  .primary-nav__logo {
     height: 30px;
     height: 1.875rem;
     width: 157px;
@@ -1202,7 +1202,7 @@ html {
 body {
   font-size: 16px;
   font-size: 1rem;
-  font-family: "Crimson Text", serif; }
+  font-family: "Open Sans", serif; }
 
 body:not(.home) .main {
   position: relative; }
@@ -1925,7 +1925,8 @@ h1.demo-form__headline, .home-hero .home-hero__content h1 p.demo-form__headline 
       font-size: 3.75rem;
       color: white; }
       .home-hero .home-hero__content h1 p {
-        font-weight: normal; }
+        font-weight: normal;
+        text-transform: none; }
       .home-hero .home-hero__content h1 small {
         font-size: 67%;
         font-size: 67%; }
@@ -2582,7 +2583,8 @@ h1.demo-form__headline, .home-hero .home-hero__content h1 p.demo-form__headline 
       margin: 0px; }
     .model-features .model-feature .model-feature__text {
       font-size: 24px;
-      font-size: 1.5rem; }
+      font-size: 1.5rem;
+      text-transform: capitalize; }
   @media (max-width: 767px) {
     .model-features {
       display: -ms-flexbox;

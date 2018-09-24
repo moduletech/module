@@ -11,6 +11,7 @@
 	}
 	box-shadow: 0px 0px 10px rgba(0,0,0,.1);
   background: white;
+  position: relative;
 }
 
 @include media(min-width $screen-md){
@@ -136,6 +137,7 @@
         top: 100%;
         left: 1000vw;
         background: $light-gray;
+        z-index: 2;
         li {
           display: block;
           a {
@@ -193,8 +195,7 @@
 	top: 32px;
 }
 
-.nav-primary .primary-nav__logo,
-.nav-primary__home .primary-nav__logo{
+.primary-nav__logo{
 	@include media(min-width $screen-mobile) {
 		@include rem(height, 50px);
 		@include rem(width, 260px);
