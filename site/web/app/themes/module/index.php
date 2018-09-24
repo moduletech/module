@@ -15,6 +15,12 @@
 get_header(); ?>
 <main class="blog-main">
 	<div class="u-container">
+
+    <div class="double-header">
+      <h2 class="title"><?= get_the_title() ?></h2>
+      <!--<h4 class="subtitle">Subtext</h4>-->
+    </div>
+
 		<section class="blog-loop">
 			<?php if ( have_posts() ) : ?>
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -27,32 +33,17 @@ get_header(); ?>
                         <div class="blog-loop__post-content">
                             <h2 class="blog-loop__post-title">
                             	<a class="u-link-black" href="<?php the_permalink(); ?>">
-                                    <?php the_title(); ?>
-                                </a>
+                                <?php the_title(); ?>
+                              </a>
                             </h2>
-                            <div class="blog-loop__post-meta">
-                                <p>
-                                	Posted in <?php the_category(', ');?> /
-                                    <time datetime="<?php the_time('Y-m-d'); ?>" pubdate itemprop="datePublished">
-                                    Published on <?php echo get_the_date('F j, Y'); ?></time>
-                                    <?php
-                                    if (is_user_logged_in()) {
-                                    	echo " / ";
-                                        edit_post_link('Edit Post');
-                                    }
-                                    ?>
-                                </p>
-                            </div><!-- /blog-loop__post-meta-->
-                                <?php the_excerpt();?>
+                            <?php the_excerpt();?>
                         </div><!-- /blog-loop__post-content-->
                     </article>
 				<?php endwhile; ?>
 				<?php the_posts_navigation(); ?>
 			<?php endif; ?>
 		</section>
-		<?php get_sidebar(); ?>
 	</div>
 </main>
-
 
 <?php get_footer(); ?>
