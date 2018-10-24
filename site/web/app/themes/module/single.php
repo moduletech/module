@@ -21,13 +21,11 @@ get_header(); ?>
                 <?php while (have_posts()) :
                     the_post(); ?>
                     <article class="blog-loop__post" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
-                        <div class="blog-loop__post-image" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                        <div class="blog-loop__post-image" itemscope itemtype="https://schema.org/ImageObject">
                             <a href="<?php the_permalink(); ?>">
-                                <?php the_post_thumbnail('blog-page');?>
+                                <?php the_post_thumbnail('');?>
                             </a>
                             <meta itemprop="url" content="<?php the_post_thumbnail_url('blog-page'); ?> ">
-                            <meta itemprop="width" content="800">
-                            <meta itemprop="height" content="400">
                         </div>
                         <div class="blog-loop__post-content">
                             <div class="blog-content" itemprop="articleBody">

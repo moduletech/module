@@ -4,19 +4,24 @@
     </div>
 
     <div class="footer-partners u-text-center">
-        <div class="u-col-four">
+        <div class="u-col-three">
             <a href="http://techstars.com" target="_blank">
                 <img class="footer-partners__logo" src="<?php echo get_stylesheet_directory_uri();?>/assets/img-dist/partners/techstars.png" alt="TechStars">
             </a>
         </div>
-        <div class="u-col-four">
+        <div class="u-col-three">
             <a href="http://alphalabgear.org" target="_blank">
                 <img class="footer-partners__logo" src="<?php echo get_stylesheet_directory_uri();?>/assets/img-dist/partners/alphalabgear.png" alt="Alphalab Gear">
             </a>
         </div>
-        <div class="u-col-four">
+        <div class="u-col-three">
             <a href="http://ideafoundry.org" target="_blank">
                 <img class="footer-partners__logo" src="<?php echo get_stylesheet_directory_uri();?>/assets/img-dist/partners/ideafoundry.png" alt="Idea Foundry">
+            </a>
+        </div>
+        <div class="u-col-three">
+            <a href="https://www.coalhillventures.com/robotics-hub.html" target="_blank">
+                <img class="footer-partners__logo" src="<?php echo get_stylesheet_directory_uri();?>/assets/img-dist/partners/roboticshub.png" alt="Robotics Hub">
             </a>
         </div>
     </div>
