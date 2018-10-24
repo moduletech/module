@@ -92,7 +92,7 @@
 }
 
 .footer-partners{
-	@include outer-container(800px);
+	@include outer-container(950px);
 	@include media(min-width $screen-md) {
 		@include rem(padding-bottom, 40px);
 		display: flex;
@@ -104,6 +104,8 @@
 	@include media(max-width $screen-md) {
 		@include rem(padding-bottom, 30px);
 	}
+	margin: 0px 15px;
+	max-width: 240px;
 }
 
 .footer-links{
