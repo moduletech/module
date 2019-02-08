@@ -75,7 +75,7 @@ $dbh        = $wpdb->dbh;
 if ( is_resource( $dbh ) ) {
 	$driver = 'mysql';
 	// @codingStandardsIgnoreStart: This IS PHP7+ compatible, mysql_get_server_info is included for backwards compatibility
-	$version = function_exists( 'mysqli_get_server_info' ) ? mysqli_get_server_info( $dbh ) : mysql_get_server_info( $dbh );		 	 			  		  	  	 
+	$version = function_exists( 'mysqli_get_server_info' ) ? mysqli_get_server_info( $dbh ) : mysql_get_server_info( $dbh );
 	// @codingStandardsIgnoreEnd
 } elseif ( is_object( $dbh ) ) {
 	$driver = get_class( $dbh );
@@ -295,7 +295,7 @@ $dump_http['PayPal API: POST']    = $remote_paypal;
 		);
 		?>
     </div>
-
+<?php $this->load_template('footer'); ?>
 
 <?php
 

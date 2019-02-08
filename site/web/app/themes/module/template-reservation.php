@@ -63,10 +63,14 @@ endif;
     <section class="reservation-form u-container">
         <header class="reservation-form__header">
             <h2 class="reservation-form__header-title u-text-center">
-                Place Your Reservation
+                <?php the_title();?>
             </h2>
         </header>
-        <?php echo do_shortcode('[gravityform id=2 title=false description=false ajax=true tabindex=49]');?>
+		<?php if (is_page('951')) { // Future of housing
+			echo do_shortcode('[gravityform id=16 title=false description=false ajax=true tabindex=49]');
+		} else {
+			echo do_shortcode('[gravityform id=2 title=false description=false ajax=true tabindex=49]');
+		} ?>
     </section>
 </div>
 

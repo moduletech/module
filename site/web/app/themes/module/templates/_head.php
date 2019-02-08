@@ -10,6 +10,7 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Unica+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
 
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.min.css"/>

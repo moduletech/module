@@ -37,7 +37,7 @@ get_header();?>
                     endif;
                     $image = get_sub_field('right_image');
                     if (!empty($image)) : ?>
-                        <div class="u-col-six">
+                        <?php /* <div class="u-col-six">
                             <img class="u-img-responsive u-center-block" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                         </div><!-- /u-col-six-->
                     <?php
@@ -47,10 +47,11 @@ get_header();?>
             endwhile;
         endif;
         ?>
-    </div><!-- /u-container-->
+    </div><!-- /u-container--> */ ?>
 
-    <div class="u-container-lg demo-form u-text-center">
-        <img class="demo-form__icon u-center-block u-img-responsive" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img-dist/demo/demo-icon.svg">
+    <div class="u-container-lg demo-form u-text-center"> 
+     
+	<?php /*<img class="demo-form__icon u-center-block u-img-responsive" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img-dist/demo/demo-icon.svg"> */ ?>
         <h1 class="demo-form__headline">
             <?php the_field('form_headline');?>
         </h1>

@@ -1,0 +1,94 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; "
+"charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl_NL\n"
+"X-Generator: Poedit 2.0.8\n"
+
+msgid "Download url"
+msgstr "Download pad"
+
+msgid "Gravity Forms Results in Excel"
+msgstr "Gravity Forms Inzendingen in Excel"
+
+msgid "Results in Excel"
+msgstr "Inzendingen in Excel"
+
+msgid "Download count"
+msgstr "Aantal keer gedownload"
+
+msgid "Download"
+msgstr "Downloaden"
+
+msgid "Order by"
+msgstr "Sorteren op"
+
+msgid "Settings"
+msgstr "Instellingen"
+
+msgid "Save settings"
+msgstr "Instellingen opslaan"
+
+msgid "Download as one Excel file"
+msgstr "Download als één Excel-bestand"
+
+msgid "Date of entry"
+msgstr "Inzendingsdatum"
+
+msgid "Acending"
+msgstr "Oplopend"
+
+msgid "Descending"
+msgstr "Aflopend"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "Date"
+msgstr "Datum"
+
+msgid "IP address"
+msgstr "IP-adres"
+
+msgid "Disable fields from export"
+msgstr "Schakel velden uit"
+
+msgid "Select the fields to disable"
+msgstr "Selecteer velden om uit te schakelen"
+
+msgid "Select the meta fields to disable"
+msgstr "Selecteer meta-velden om uit te schakelen"
+
+msgid "Regenerate url"
+msgstr "Stel url opnieuw in"
+
+msgid "This changed the download url permanently!"
+msgstr "Hiermee verandert u de download-link permanent!"
+
+msgid "The download url has been regenerated."
+msgstr "De download-link is opnieuw ingesteld."
+
+msgid "The settings have been saved."
+msgstr "De instellingen zijn opgeslagen."
+
+msgid "General settings"
+msgstr "Algemene instellingen"
+
+msgid "Enable notes"
+msgstr "Notities toevoegen"
+
+msgid "Yes, enable the notes for every entry"
+msgstr "Ja, voeg de notities toe aan elke inzending"
+
+msgid "Custom filename"
+msgstr "Aangepaste bestandsnaam"
+
+msgid "Only letters, numbers and dashes are allowed. The rest will be stripped. Leave empty for default."
+msgstr "Alleen letters, nummers en streepjes zijn toegestaan. Bij leeg veld wordt de standaard waarde gebruikt."
