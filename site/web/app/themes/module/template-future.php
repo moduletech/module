@@ -1,4 +1,48 @@
+<?php /*
+/* Template Name: Future of Housing
+*/
+get_header();
+?>
+<head>
+  <link rel="stylesheet" href="https://use.typekit.net/cnc7avl.css">
+</head>
+<?php
+// HERO LAYOUT
+  if (have_rows('future_of_housing_hero')) :
+    while (have_rows('future_of_housing_hero')): the_row();
+    $hero_image = get_sub_field('hero_image')
+      ? 'style="background-image: url('.get_sub_field('hero_image')['url'].')"'
+      : '';
+    $hero_image_mobile = get_sub_field('hero_image_mobile')
+      ? get_sub_field('hero_image_mobile')['url']
+      : '';
+  ?>
 <style>
+  h1, .home-hero .home-hero__content h1 p, h2, h3, .price-tiers .tier .price, h4, h5, h6, .menu-item a, button, input[type="button"], input[type="reset"], input[type="submit"], .btn, div {
+    font-family: "Neue Haas", sans-serif !important;
+    text-transform: none !important;
+    color: #0A2240;
+  }
+  
+  @media screen and (max-width: 1100px){
+    .home-hero {
+      height: auto !important;
+    }
+  }
+  
+  @media screen and (max-width: 767px){
+    .home-hero {
+      background-image: url(<?php echo $hero_image_mobile; ?>) !important;
+      background-position: center !important;
+      background-size: 100%;
+      position: relative !important;
+      max-height: 35vh !important;
+    }
+    
+    .future-highlight {
+      width: 40vw;
+    }
+  }
   
   .text-center{
     text-align: center;
@@ -24,31 +68,67 @@
     flex-wrap: wrap;
   }
   
+  .flex-center-row-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+  }
+  
   .future-of-icons-section {
     margin-top: 7%;
   }
   
   .future-icon {
     border-radius: 50%;
-    min-width: 200px;
-    max-width: 300px;
-    border-color: navy;
-    border-width: thin;
+    min-width: 100px;
+    max-width: 150px;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+  }
+  
+  .future-icon-caption {
+    padding-left: 2em;
+    padding-right: 2em;
   }
   
   .future-blurb {
     margin: 7% 15%;
     text-align: center;
+    line-height: 1.5em;
   }
   
   .future-speaker {
     margin-top: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+    min-width: 340px;
   }
   
   .speaker-profile-pic {
     border-radius: 50%;
-    max-width: 300px;
+    max-width: 200px;
     margin-bottom: 1em;
+  }
+  
+  @media screen and (max-width: 650px){
+    .speaker-profile-pic {
+      max-width: 100px;
+    } 
+    
+    .future-speaker {
+      max-width: 40vw;
+      min-width: 10vw;
+    }
+    
+    .future-blurb p{
+      font-size: 1em;  
+    }
+    
+    .line-break {
+      display: none;
+    }
   }
   
   .future-agenda-section {
@@ -63,14 +143,6 @@
     width: 50%;
   }
   
-  .future-agenda-line{
-    display: flex;
-    flex-direction: row;
-    align-content: flex-start;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-  }
-  
   .future-agenda-time {
     margin-right: 2em;
   }
@@ -83,27 +155,13 @@
   
   .future-sponsor-logo {
     max-width: 360px;
-    max-height: 
+    max-height: 360px;
   }
   
 </style>
 
-<?php /*
-/* Template Name: Future of Housing
-*/
-get_header();
-?>
-
-
 <main class="main" itemscope itemType="https://schema.org/WebPage">
-<?php
-// HERO LAYOUT
-  if (have_rows('future_of_housing_hero')) :
-    while (have_rows('future_of_housing_hero')): the_row();
-    $hero_image = get_sub_field('hero_image')
-      ? 'style="background-image: url('.get_sub_field('hero_image')['url'].')"'
-      : '';
-  ?>
+
   <section class="home-hero u-text-center" <?=$hero_image;?>>
     <div class="home-hero__content">
       <h1 class="home-hero__headline u-text-white" itemprop="headline">
@@ -111,34 +169,39 @@ get_header();
       </h1>
     </div>
   </section>
-  <section class="home-hero__blurb">
-    <a class="btn btn-outline-black" href="<?= get_sub_field('tickets_link'); ?>">Get Tickets</a>
-  </section>
+    <a href="<?= get_sub_field('tickets_link'); ?>" class="home-hero__blurb-future" style="font-size: 2em;">Click Here to Get Tickets</a>
+  
   <? endwhile; endif; ?>
   <? if (have_rows('future_highlights')): ?>
-  <section class="flex-row-container future-of-icons-section">
+  <section class="flex-center-row-container future-of-icons-section">
     <? 
     while (have_rows('future_highlights')):
       the_row();
     ?>
     <div class="flex-column-container text-center">
-      <h3><?= get_sub_field('future_title'); ?></h3>
-      <img class="future-icon" alt="image here" src="<?= get_sub_field('future_icon'); ?>"/>
+      <div class="future-highlight">
+        <div class="text-center">
+          <img class="future-icon" alt="image here" src="<?= get_sub_field('future_icon'); ?>"/>
+        </div>
+        <div class="text-center">
+          <h3 class="future-icon-caption"><?= get_sub_field('future_title'); ?></h3>
+        </div>
+      </div>
     </div>
     <? endwhile; ?>
   </section>
   <? endif; ?>
   
   <section class="future-blurb">
-    <h3>
+    <p>
       <?= get_field('future_blurb') ?>
-    </h3>
+    </p>
   </section>
   
  
   <section class="text-center">
     <h2>Speakers</h2>
-    <div class="flex-row-container">
+    <div class="flex-center-row-container">
       <? 
         $num_speakers = 0;
         while (have_rows('speakers')):
@@ -146,51 +209,48 @@ get_header();
           $num_speakers += 1;
       ?>
      <div class="flex-column-container future-speaker text-center">
-      <img class="speaker-profile-pic" src="<?= get_sub_field('profile'); ?>"/>
-       <h3><a href="<?= get_sub_field('linkedin'); ?>" target="_blank"><?= get_sub_field('name'); ?></a></h3>
+       <a href="<?= get_sub_field('linkedin'); ?>" target="_blank">
+        <img class="speaker-profile-pic" src="<?= get_sub_field('profile'); ?>"/>
+         <h3><b><?= get_sub_field('name'); ?></b></h3>
+         <h4><?= get_sub_field('profile_title'); ?><br /><?= get_sub_field('profile_company'); ?></h4>
+       </a>
      </div>
-      <?  
-      if ($num_speakers == 3) :
-      ?>
-      <div class="line-break"></div>
-      <?
-        $num_speakers = 0;
-      endif;
-      endwhile; ?>
+      <? endwhile; ?>
     </div>
   </section>
   
-  <section class="future-agenda-section">
+  <section class="flex-column-container future-agenda-section">
     <div class="text-center">
       <h2>Agenda</h2>
     </div>
-    <div class="flex-column-container future-agenda-items">
+    
+    <div class="future-agenda-items">
       <?
       while (have_rows('agenda')):
       the_row();
       ?>
       <div class="future-agenda-line">
-        <h3 class="future-agenda-time">
+        <hr />
+        <h4>
           <?= get_sub_field('start_time'); ?> - <?= get_sub_field('end_time'); ?>
-        </h3>
+        </h4>
         <h3>
           <?= get_sub_field('session_title'); ?>
         </h3>
       </div>
-      <hr />
       <? endwhile; ?>
     </div>
   </section>
   
   <section class="future-sponsors-section">
     <div class="text-center">
-      <h2>Our Partners</h2>
+      <h2>Our Sponsors</h2>
     </div>
     
     <? if (have_rows('platinum_sponsors')): ?>
     <br />
     <hr />
-    <h3>Platinum Sponsors</h3>
+    <h3>Platinum</h3>
     <div class="flex-row-container">
       <?
       while (have_rows('platinum_sponsors')): 
@@ -210,7 +270,7 @@ get_header();
     <? if (have_rows('gold_sponsors')): ?>
     <br />
     <hr />
-    <h3>Gold Sponsors</h3>
+    <h3>Gold</h3>
     <div class="flex-row-container">
       <?
       while (have_rows('gold_sponsors')): 
@@ -230,7 +290,7 @@ get_header();
     <? if (have_rows('silver_sponsors')): ?>
     <br />
     <hr />
-    <h3>Silver Sponsors</h3>
+    <h3>Silver</h3>
     <div class="flex-row-container">
       <?
       while (have_rows('silver_sponsors')): 
@@ -274,3 +334,8 @@ get_header();
   <br />
 
 </main>
+
+
+<?php
+// include('templates/_mailing-list.php');
+get_footer();?>

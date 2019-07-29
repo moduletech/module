@@ -106,6 +106,17 @@ function module_marcomm_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'module_marcomm_scripts' );
 
+function my_theme_enqueue_styles() {
+    wp_enqueue_style(
+	'theme-styles',
+	get_stylesheet_directory_uri() . '/style.min.css',
+	array(),
+	filemtime( get_stylesheet_directory() . '/style.min.css' )
+);
+}
+add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
+
+
 //
 // Dequeue WP Embed
 // ---------------------------------------

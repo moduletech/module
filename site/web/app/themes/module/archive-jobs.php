@@ -11,6 +11,9 @@ get_header(); ?>
 
 <main class="blog-main">
     <div class="u-container">
+      <div class="double-header">
+        <h2 class="title">Available Module Positions</h2>
+      </div>
         <section class="blog-loop">
             <?php if (have_posts()) : ?>
                 <?php while (have_posts()) :
@@ -48,6 +51,8 @@ get_header(); ?>
                     </article>
                 <?php endwhile; ?>
                 <?php the_posts_navigation(); ?>
+            <?php else: ?>
+              <p>There are no positions currently available.</p>
             <?php endif; ?>
         </section>
         <?php get_sidebar(); ?>

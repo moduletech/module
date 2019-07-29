@@ -7,10 +7,10 @@
     <?php wp_head(); ?>
 
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img-dist/favicon.ico"/>
-
+  
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Unica+One" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/cnc7avl.css">
 
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.min.css"/>

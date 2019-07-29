@@ -1,6 +1,5 @@
 <?php get_header();?>
 
-
 <main class="main u-container  blog-template" itemscope="itemscope" itemtype="http://schema.org/Blog">
 
 	<?php get_sidebar();?>

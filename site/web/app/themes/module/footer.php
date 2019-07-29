@@ -11,28 +11,59 @@
 
 ?>
 
-
-<section class="ready_to_get_started">
-  <div class="home-header">
-    <h2 class="title"><?=get_field('rtgs_title','options')?></h2>
-  </div>
-  <div class="content">
-		<? foreach(array('one','two','three') as $n) { ?>
-      <div class="col">
-        <? $col = get_field('rtgs_column_'.$n,'options'); ?>
-        <h3 class="title"><?=$col['title']?></h3>
-        <div class="buttons">
-          <? foreach($col['buttons'] as $button) { ?>
-          <a class="btn btn-outline-black" href="<?=$button['button_url']?>"><?=$button['button_text']?></a>
-          <? } ?>
-        </div>
-      </div>
-    <? } ?>
-  </div>
-</section>
-
-
-
+<style>
+  
+  .process {
+    margin: 0 4%;
+    text-align: center;
+  }
+  
+  .process .title {
+    font-size: 2.5em;
+  }
+  
+  .process .blurb {
+    width: 60%;
+    margin: auto;
+  }
+  
+  .process-buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    margin: 0 auto 8em;
+    padding: 1em 0 0;
+  }
+  
+  .process-item {
+    width: 40%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  
+  .process-item .title {
+    font-size: 2em;
+    white-space: nowrap;
+  }
+  
+  .process-image-footer {
+    max-width: 80%;
+  }
+  
+  @media screen and (max-width: 641px){
+    .process-buttons-container {
+      flex-direction: column;
+    }
+    
+    .process-item {
+      width: 100%;
+    }
+    
+  }
+   
+</style>
 
 <? if ( is_singular( 'models' ) ) { ?>
     <section class="model-other-models u-border-bottom">
@@ -65,9 +96,38 @@
     </section>
 <? } ?>
 
+<?php if( is_front_page() ): ?>
 
-
-
+<section class="process" id="process-branch">
+  <div class="double-header">
+    <h2 class="title">Build With Us </h3>
+    <p class="blurb">No matter where you are in the process, we meet you there. Click below to learn more about our process.</p>
+  </div>
+  <br />
+  <div class="process-buttons-container">
+    <div class="process-item">
+      <h3 class="title">I own land</h3>
+      <div>
+        <a class="btn" href="http://staging.modulehousing.com/projects/landowner-process/">
+          <img class="u-img-responsive process-image-footer" src="/wp-content/themes/module/assets/img-src/OwnLand_Icon.png" />
+          <br /><br />
+          <div class="btn btn-outline-black">Learn More</div>
+        </a>
+      </div>
+    </div>
+    <div class="process-item">
+      <h3 class="title">I don't own land</h3>
+      <div>
+        <a class="btn" href="http://staging.modulehousing.com/projects/non-landowner-process/">
+          <img class="u-img-responsive process-image-footer" src="/wp-content/themes/module/assets/img-src/NoLand_Icon.png" />
+          <br /><br />
+          <div class="btn btn-outline-black">Learn More</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<? endif; ?>
     <?php
     require('templates/_footer.php');
     wp_footer(); ?>
@@ -85,6 +145,15 @@
     <!-- Start of HubSpot Embed Code -->
       <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/3833560.js"></script>
     <!-- End of HubSpot Embed Code -->
+    
+    <!-- Scroll to anchor code -->
+    <script type="text/javascript">
+      function scrollToAnchor(aid){
+        var anchorTag = $("a[name='" + aid + "']");
+        $('html,body').animate({scrollTop: anchorTag.offset().top}, 'slow');
+      }
+    </script>
+    <!-- End of Scroll to anchor code -->
 
     </body>
 </html>
