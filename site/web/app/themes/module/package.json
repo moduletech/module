@@ -16,7 +16,7 @@
     "url": "http://inquiri.com"
   },
   "dependencies": {
-    "laravel-elixir": "^5.0.0",
+    "laravel-elixir": "^6.0.0-18",
     "libnotify": "^1.0.4"
   },
   "devDependencies": {
